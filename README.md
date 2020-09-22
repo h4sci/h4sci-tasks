@@ -24,6 +24,6 @@ Groups are named according to a stack of Poker cards:
 7. Eights
 8. Sevens (if needed).
 
-We will aim at a group size of 3-5 persons per group. In addition every participant will be assigned one of clubs ♣, diamonds ♦, hearts ♥ or spades ♠. This will help create meta groups for cross group discussions etc. easily. 
+We will aim at a group size of 3-5 persons per group. In addition every participant will be assigned one of clubs ♣, diamonds ♦, hearts ♥ or spades ♠ . This will help create meta groups for cross group discussions etc. easily. 
 
 
