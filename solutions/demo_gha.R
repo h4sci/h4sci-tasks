@@ -1,11 +1,10 @@
+#!/usr/bin/env Rscript
+
 library(data.table)
 library(tsbox)
 library(zoo)
 library(OECD)
-labor <- get_dataset("STLABOUR", filter = "CHE")
-
 small <- get_dataset("STLABOUR", filter = list("CHE","LRHUTTTT"))
-
 
 dt_l <- data.table(small)
 tsdt <- dt_l[
