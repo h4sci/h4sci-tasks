@@ -1,7 +1,4 @@
 #!/usr/bin/env Rscript
-
-install.packages(c("data.table", "zoo","tsbox","OECD"))
-
 library(data.table)
 library(tsbox)
 library(zoo)
