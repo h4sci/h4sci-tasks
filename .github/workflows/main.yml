@@ -1,0 +1,30 @@
+# Simple data transformation workflow
+name: OECD Unemployment Rate CHE
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the main branch
+on:
+  workflow_dispatch
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  oecd:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    container: rocker/verse
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - run: |
+          install.packages(c("data.table", "zoo","tsbox","OECD"))
+          chmod +x solutions/demo_gha.R
+          git config --local user.email "bot@h4sci.ch"
+          git config --local user.name "Bill the bot"
+          ./solutions/demo_gha.R
+      - run: |-
+          git add unemployment_rate_ch.csv
+          git commit -m 'automatic raw data update'
+          git push 
+
