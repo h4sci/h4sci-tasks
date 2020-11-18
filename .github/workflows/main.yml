@@ -18,7 +18,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - run: |
-          install.packages(c("data.table", "zoo","tsbox","OECD"))
           chmod +x solutions/demo_gha.R
           git config --local user.email "bot@h4sci.ch"
           git config --local user.name "Bill the bot"
