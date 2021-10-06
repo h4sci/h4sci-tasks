@@ -16,7 +16,7 @@ create_group <- function(x, group_size = 4){
 #' @param group_size integer from 1 to 5.
 shuffle_cards <- function(x, group_size = 4){
   e <- new.env()
-  e$av <- nms
+  e$av <- x
   no_grps <- ceiling(length(x) / group_size)
   groups <- list()
   for (i in 1:no_grps){
@@ -34,3 +34,24 @@ shuffle_cards <- function(x, group_size = 4){
 nms <- paste("student", c(LETTERS,letters)[1:33], sep = " ")
 shuffle_cards(nms, 5)
 
+
+students <- c(
+  "Bérubé Caterina",
+  "Chandra Adelina",
+  "Ho	Wan Ri",
+  "Javanmard Hoda",
+  "Koller Daniela",
+  "Krizakova Viola",
+  "Lenzner Andrea Elisabeth",
+  "Lichtin Florian Maurus",
+  "Mühlebach Nina",
+  "Schneider Lena",
+  "Seiler	Pascal Raphael",
+  "Siegrist	Anne Stefanie",
+  "Toetzke Malte Lorenz",
+  "Wey Simon",
+  "Zachmann	Lucca",
+  "David"
+)
+
+shuffle_cards(students,4)

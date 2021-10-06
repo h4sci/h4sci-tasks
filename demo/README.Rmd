@@ -1,0 +1,16 @@
+---
+title: "Automation Demo"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE}
+library(tstools)
+w <- window(baro,start=c(2008,1))
+tsplot("KOF Economic Barometer" = w)
+
+```
+
