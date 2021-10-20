@@ -33,7 +33,7 @@ library(rmarkdown)
 
 # do I need to download the barometer ?
 
-last_update <- as.POSIXct(readLines("examples/status"))
+last_update <- as.POSIXct(readLines("../h4sci-tasks/status"))
 
 # position of the first publication date that is
 # greater than the current last update
@@ -42,7 +42,7 @@ dp <- which(cumsum(last_update < posix_dates) == 1)
 # run
 if(posix_dates[dp] < Sys.time()){
   baro <- get_time_series("ch.kof.barometer")[[1]]
-  render("demo/README.Rmd",
+  render("../h4sci-tasks/demo/README.Rmd",
          md_document(variant = "gfm"))
   writeLines(as.character(Sys.time()),"status")
   message("KOF Barometer updated.")
