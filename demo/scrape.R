@@ -33,7 +33,7 @@ library(rmarkdown)
 
 # do I need to download the barometer ?
 
-last_update <- as.POSIXct(readLines("status"))
+last_update <- as.POSIXct(readLines("examples/status"))
 
 # position of the first publication date that is
 # greater than the current last update
