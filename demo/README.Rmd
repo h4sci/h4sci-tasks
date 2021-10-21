@@ -7,6 +7,11 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+## KOF Economic Barometer Report
+
+Plain Text
+
 ```{r, echo=FALSE, message=FALSE, warnings=FALSE}
 library(tstools)
 w <- window(baro,start=c(2008,1))

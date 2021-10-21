@@ -38,6 +38,7 @@ shuffle_cards(nms, 5)
 students <- c(
   "Bérubé Caterina",
   "Chandra Adelina",
+  "Davoudi Neda",
   "Ho	Wan Ri",
   "Javanmard Hoda",
   "Koller Daniela",
@@ -49,9 +50,10 @@ students <- c(
   "Seiler	Pascal Raphael",
   "Siegrist	Anne Stefanie",
   "Toetzke Malte Lorenz",
+  "Vincent Rose",
   "Wey Simon",
-  "Zachmann	Lucca",
-  "David"
+  "Wu Fan",
+  "Zachmann	Lucca"
 )
 
 shuffle_cards(students,4)
