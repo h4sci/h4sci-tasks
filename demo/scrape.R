@@ -1,3 +1,6 @@
+# Thanks to Lucca for the pointer
+# https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?hl=de
+
 library(rvest)
 
 url <- "https://kof.ethz.ch/en/news-and-events/media/media-agenda.html"
