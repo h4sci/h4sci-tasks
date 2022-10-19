@@ -35,25 +35,24 @@ nms <- paste("student", c(LETTERS,letters)[1:33], sep = " ")
 shuffle_cards(nms, 5)
 
 
-students <- c(
-  "Bérubé Caterina",
-  "Chandra Adelina",
-  "Davoudi Neda",
-  "Ho	Wan Ri",
-  "Javanmard Hoda",
-  "Koller Daniela",
-  "Krizakova Viola",
-  "Lenzner Andrea Elisabeth",
-  "Lichtin Florian Maurus",
-  "Mühlebach Nina",
-  "Schneider Lena",
-  "Seiler	Pascal Raphael",
-  "Siegrist	Anne Stefanie",
-  "Toetzke Malte Lorenz",
-  "Vincent Rose",
-  "Wey Simon",
-  "Wu Fan",
-  "Zachmann	Lucca"
-)
-
+students <- c("student_1",
+ "student_2",
+ "student_3",
+ "student_4",
+ "student_5",
+ "student_6",
+ "student_7",
+ "student_8",
+ "student_9",
+ "student_10",
+ "student_11",
+ "student_12",
+ "student_13",
+ "student_14",
+ "student_15",
+ "student_16",
+ "student_17",
+ "student_18",
+ "student_19",
+ "student_20")
 shuffle_cards(students,4)
