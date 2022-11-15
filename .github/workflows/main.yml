@@ -19,14 +19,16 @@ jobs:
         run: apk add git --update-cache
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout action
-      - uses: actions/checkout@v2
-      - run: |
+        uses: actions/checkout@v2
+      - name: Do R stuff
+        run: |
           Rscript -e 'install.packages(c("data.table", "zoo","tsbox","OECD"))'
           chmod +x demo/demo_gha.R
           git config user.email github-actions
           git config user.name github-actions@github.com
           ./demo/demo_gha.R
-      - run: | 
+      name: git commit push
+        run: | 
           git add data/unemployment_rate_ch.csv
           git commit -m 'automatic raw data update'
           git push 
