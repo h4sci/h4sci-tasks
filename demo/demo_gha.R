@@ -14,5 +14,5 @@ tsdt <- dt_l[
 ]
 
 
-fwrite(tsdt, file="unemployment_rate_ch.csv")
+fwrite(tsdt, file="data/unemployment_rate_ch.csv")
 
