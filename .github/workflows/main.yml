@@ -20,8 +20,8 @@ jobs:
       - run: |
           Rscript -e 'install.packages(c("data.table", "zoo","tsbox","OECD"))'
           chmod +x demo/demo_gha.R
-          git config --local user.email "bot@h4sci.ch"
-          git config --local user.name "Bill the bot"
+          git config user.email "bot@h4sci.ch"
+          git config user.name "Bill the bot"
           ./demo/demo_gha.R
       - run: |-
           git add data/unemployment_rate_ch.csv
