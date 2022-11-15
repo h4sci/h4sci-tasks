@@ -15,8 +15,11 @@ jobs:
     container: rocker/verse
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Latest Git only within container checkout
+        run: apk add git --update-cache
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - name: Checkout action
+      - uses: actions/checkout@v2
       - run: |
           Rscript -e 'install.packages(c("data.table", "zoo","tsbox","OECD"))'
           chmod +x demo/demo_gha.R
