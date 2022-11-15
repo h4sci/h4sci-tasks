@@ -22,11 +22,12 @@ jobs:
       - run: |
           Rscript -e 'install.packages(c("data.table", "zoo","tsbox","OECD"))'
           chmod +x demo/demo_gha.R
-          git config user.email github-actions
-          git config user.name github-actions@github.com
           ./demo/demo_gha.R
-      - run: | 
-          git add data/unemployment_rate_ch.csv
-          git commit -m 'automatic raw data update'
-          git push 
+      - run: ls -lah
+#      - run: | 
+ #         git config user.email github-actions
+  #        git config user.name github-actions@github.com
+   #       git add data/unemployment_rate_ch.csv
+    #      git commit -m 'automatic raw data update'
+     #     git push 
 
