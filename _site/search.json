@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "exercises.html",
+    "href": "exercises.html",
+    "title": "Git Setup",
+    "section": "",
+    "text": "In this exercise we will test how well you know how to set up git in your working directory.\nWe will do this by looking at a specific example:\nLet’s say, you and your classmates are supposed to be working on a Data Analytics and Visualisation task using the built-in mtcars dataset, where each of you are working on a different part of the task. You come up with the idea to use git to help keep track of different versions when working together.\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n\n\n\n\nHow would you set up git in your working directory ?\n\n\n\n\n\n\nYour turn!\n\n\n\nIdentify the set of commands needed to set up git on your machine!\n\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s say you changed, added or removed some files in the course of your work. How will you make these changes known to your colleagues?\n\n\n\n\n\n\nYour turn!\n\n\n\nIdentify the commands needed to share your changes with others!"
+  },
+  {
+    "objectID": "exercises.html#exercise-1",
+    "href": "exercises.html#exercise-1",
+    "title": "Git Setup",
+    "section": "",
+    "text": "How would you set up git in your working directory ?\n\n\n\n\n\n\nYour turn!\n\n\n\nIdentify the set of commands needed to set up git on your machine!"
+  },
+  {
+    "objectID": "exercises.html#exercise-2",
+    "href": "exercises.html#exercise-2",
+    "title": "Git Setup",
+    "section": "",
+    "text": "Let’s say you changed, added or removed some files in the course of your work. How will you make these changes known to your colleagues?\n\n\n\n\n\n\nYour turn!\n\n\n\nIdentify the commands needed to share your changes with others!"
+  },
+  {
+    "objectID": "exercises.html#exercise-1-1",
+    "href": "exercises.html#exercise-1-1",
+    "title": "Git Setup",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nHow do you go about ensuring that you don’t get in eachothers way when working?"
+  },
+  {
+    "objectID": "exercises.html#exercise-2-1",
+    "href": "exercises.html#exercise-2-1",
+    "title": "Git Setup",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nLet’s say you while you were away, you aren’t sure whether your teammates were working on your project or not. What do you do before working again?"
+  },
+  {
+    "objectID": "exercises.html#exercise-1-2",
+    "href": "exercises.html#exercise-1-2",
+    "title": "Git Setup",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nOn branch main\nYour branch and 'origin/main' have diverged,\nand have 1 and 2 different commits each, respectively."
+  }
+]

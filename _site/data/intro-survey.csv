@@ -1,0 +1,23 @@
+id,general,l_r,l_python,l_julia,l_matlab,l_sql,l_cpp,l_js,l_web,w_git,w_markdown,w_scrum,w_kanban,i_docker,i_kubernetes,i_azure,i_gpc,i_aws,i_eth,expect,cgroup
+561590335c546848219cd773d7ef94e8,parallel computing,2,2,1,2,2,1,2,2,1,1,2,2,1,1,2,1,1,1,,Q
+c9ed4420ec6a0cc4e2fc2f0a4f51a4ff,deployment,2,2,1,1,2,1,1,2,2,1,5,5,2,1,2,2,2,1,,T
+39923d117f42ba10722edfaa99c55848,opensource licensing,2,3,1,1,1,1,1,1,3,2,1,1,1,1,1,1,1,1,,K
+2ac3f5140b9d6120a523cda1a73a63c3,"containerization,static website generator",3,3,1,2,3,1,2,3,2,1,3,3,2,2,2,2,2,1,,A
+010fa00ff8c7e546c6ca7dc936f4197e,"melt vs. cast, long vs. wide,opensource licensing",4,3,1,2,1,1,1,3,2,3,2,1,1,1,1,2,2,2,,K
+2cd1ee07e5f209d97af0061dfd555816,"melt vs. cast, long vs. wide",3,1,1,3,1,1,1,1,2,2,1,1,1,1,1,1,1,1,,J
+290578fac78c293baa9c8a376233b56d,"melt vs. cast, long vs. wide",4,2,1,2,2,1,1,2,2,2,1,1,1,1,1,1,1,1,,J
+61f432fe84335f2694294fefa2a55fd4,"parallel computing,opensource licensing",2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,1,,K
+38b79136b1e27c27f44c28b5a86a2702,"melt vs. cast, long vs. wide,opensource licensing",4,2,1,2,2,1,2,2,3,3,1,1,1,1,1,2,2,2,,A
+65796df87516c8813f1acb0286307746,"",4,2,2,2,2,1,2,2,2,2,1,1,2,1,1,1,1,1,,N
+ec3842a9bb294aff4c854969a04cbc76,"melt vs. cast, long vs. wide,feature branch based workflow",4,3,2,3,2,1,2,2,2,3,1,1,1,1,1,2,2,1,,A
+3fc5c3b03514d881fd55bc6676ec31ff,"melt vs. cast, long vs. wide,parallel computing",4,2,2,3,2,1,1,1,2,2,1,3,2,1,1,1,1,1,,A
+a772bb8aaf61a13e197c98caf81e665a,"relational vs. non-relational,opensource licensing",4,2,1,4,2,1,1,1,3,1,1,1,1,1,1,1,1,1,,Q
+4bb34136b56542936133fcf6cd649213,"melt vs. cast, long vs. wide,parallel computing",4,2,1,1,2,1,2,2,3,4,1,1,2,1,1,1,2,1,,E
+86455e946314908d3def02978f295b21,"relational vs. non-relational,parallel computing,opensource licensing",4,4,2,3,2,4,3,2,3,2,1,1,2,1,1,2,1,1,,T
+8e4213d8ea92bf3a9b08f2a4e45ab6c9,"melt vs. cast, long vs. wide,feature branch based workflow,parallel computing",4,2,1,1,1,1,1,1,2,3,2,1,3,1,1,1,1,1,,E
+e4a7b609719cfad656910aeb364893a2,"compiled vs. interpreted,parallel computing",3,2,1,2,2,1,2,2,2,3,1,1,1,1,1,2,1,1,,N
+617e27fdd56fefc5d74b512b157de94a,relational vs. non-relational,2,2,1,4,2,2,1,1,2,1,1,1,1,1,1,1,1,1,,J
+9036afc5012648ecbeeb2e42f8759685,"",2,2,1,2,1,1,1,1,2,1,1,2,1,1,1,1,1,1,,N
+fbd4f01bf582f1c32b61f0d1150e7877,opensource licensing,4,2,1,2,1,1,2,2,1,2,2,1,1,1,1,1,1,1,,Q
+53c3a2cdebec825ebb58a58c1a7eaaac,"melt vs. cast, long vs. wide",3,3,1,2,2,1,1,2,2,1,1,1,1,1,1,1,1,1,,E
+64b5c0967c70a61778150636f2d12c40,"compiled vs. interpreted,deployment",2,4,1,2,2,1,2,2,2,1,2,1,2,1,1,2,1,2,,N

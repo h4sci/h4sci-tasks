@@ -1,0 +1,132 @@
+---
+editor: source
+engine: knitr
+filters:
+  - webr-teachr
+  - quiz-teachr
+webr:
+  packages: ["kofdata"]
+  autoload-packages: false
+---
+
+
+# Git Setup
+
+In this exercise we will test how well you know how to set up git in your working directory.
+
+We will do this by looking at a specific example: 
+
+Let's say, you and your classmates are supposed to be working on a Data Analytics and Visualisation task using the built-in `mtcars` dataset, where each of you are working on a different part of the task. You come up with the idea to use git to help keep track of different versions when working together.
+
+```{r setup, include = FALSE}
+library(kofdata)
+# baro <- get_collection("ogd_ch.kof.barometer")
+# print(baro)
+# to print only part of the tslist
+# baro_df <- as.data.frame(baro)
+# print(baro_df[1:20, ])
+```
+```{r message = FALSE, warnings = FALSE}
+head(mtcars)
+```
+
+
+## Exercise 1
+
+How would you set up git in your working directory ?
+
+::: {.callout-caution}
+## Your turn!
+Identify the set of commands needed to set up git on your machine!
+:::
+
+:::{.quiz-multichoice}
+- [X] [`git init`]{hint="o"}
+- [ ] [`git configuration`]{hint="x"}
+- [ ] [`git start`]{hint="x"}
+- [ ] [`git add`]{hint="x"}
+:::
+
+
+## Exercise 2
+
+Let's say you changed, added or removed some files in the course of your work. How will you make these changes known to your colleagues?
+
+::: {.callout-caution}
+## Your turn!
+Identify the commands needed to share your changes with others!
+:::
+
+:::{.quiz-multichoice}
+- [X] [`git add`]{hint="o"}
+- [ ] [`git final`]{hint="x"}
+- [X] [`git commit`]{hint="o"}
+<!-- TODO: determine whether you need to add the whole command, e.g. `git commit -m "xyz"` -->
+- [ ] [`git pull`]{hint="x"}
+- [X] [`git push`]{hint="o"}
+:::
+
+# Git Collaboration 
+Now that you've set up your repository and shared your first commit with your teammates, you want to work on them together, and possibly simultaneously. 
+
+## Exercise 1
+How do you go about ensuring that you don't get in eachothers way when working?
+
+:::{.quiz-multichoice}
+
+- [X] [Create a new branch]{hint="o"}
+- [ ] [Create a new repository]{hint="x"}
+- [ ] [Proceed as is]{hint="x"}
+:::
+
+## Exercise 2
+
+Let's say you while you were away, you aren't sure whether your teammates were working on your project or not. What do you do before working again?
+
+:::{.quiz-multichoice}
+
+- [ ] [Ask them]{hint="x"}
+- [X] [`git pull`]{hint="o"}
+- [ ] [`git push`]{hint="x"}
+
+:::
+
+<!-- # Git Merge Conflicts
+
+You and your colleagues were dilligent in your collaboration, but for some unknown reason, you still get the following output when trying to push your changes:
+
+```bash
+CONFLICT (content): Merge conflict in file-name.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+How would you go about fixing this?
+
+:::{.quiz-multichoice}
+
+- [X] [check in which file the conflict happened]{hint="o"}
+- [X] []{hint="o"}
+- [ ] [`git push`]{hint="x"}
+
+::: -->
+
+
+
+# Git Diverging Branches
+
+You and a colleague have been working on a project, but someone forgot to pull before re-starting the work. 
+Now Git tells you that you have diverging branches. How do you deal with this issue?
+
+## Exercise 1
+
+```bash
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 2 different commits each, respectively.
+```
+
+:::{.quiz-multichoice}
+- [ ] [`git pull`]{hint="x"}
+- [X] [`git rebase`]{hint="o"}
+- [X] [`git merge`]{hint="o"}
+:::

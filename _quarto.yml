@@ -1,0 +1,38 @@
+project:
+  type: website
+  resources:
+    - "images/twitter-card.png"
+    - "data"
+  render:
+    - "*.qmd"
+    - "!README.qmd"
+
+website:
+  page-navigation: true
+  title: "H4Sci Exercises"
+  description: "Test your knowledge of the concepts taught in H4Sci"
+  # TODO: change this depening on website hosted
+  site-url: "https://workshop.nectric.com.au/user2024"
+
+  repo-url: https://github.com/h4sci/h4sci-tasks
+  repo-actions: [edit, issue]
+
+  page-footer:
+    left: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    background: "#426D98"
+
+  navbar:
+    background: "#426D98"
+    pinned: true
+    align: center
+
+
+format:
+  html:
+    theme:
+      light: [cosmo, theme.scss]
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    mainfont: "Open Sans"
+    # include-after-body: plausible.html
