@@ -1,6 +1,9 @@
 # h4sci-tasks
 
-Tasks and Exercises for Participants of the 2020 course taught within the D-MTEC of PhD program of ETH Zurich. This repository will stay private. Students answers will **not** be publicly exposed. Publication of any contrbutions to this repository is not permitted without explicit prior consent of the person(s) who contributed. 
+Tasks and Exercises for Participants of the 2024 course taught within the D-MTEC of PhD program of ETH Zurich. This repository will stay private. Students answers will **not** be publicly exposed. Publication of any contributions to this repository is not permitted without explicit prior consent of the person(s) who contributed. 
+
+## Quiz of previous Block:
+Available at [https://h4sci.github.io/h4sci-tasks/index.html](https://h4sci.github.io/h4sci-tasks/index.html)
 
 
 ## Structure
