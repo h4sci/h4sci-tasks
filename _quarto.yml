@@ -11,9 +11,7 @@ website:
   page-navigation: true
   title: "H4Sci Exercises"
   description: "Test your knowledge of the concepts taught in H4Sci"
-  # TODO: change this depening on website hosted
-  site-url: "https://workshop.nectric.com.au/user2024"
-
+  site-url: "https://h4sci.github.io/h4sci-tasks/index.html"
   repo-url: https://github.com/h4sci/h4sci-tasks
   repo-actions: [edit, issue]
 
