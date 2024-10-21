@@ -5,39 +5,22 @@ filters:
   - webr-teachr
   - quiz-teachr
 webr:
-  packages: ["kofdata"]
+  # packages: ["kofdata"]
   autoload-packages: false
 ---
 
 
 # Git Setup
 
-In this exercise we will test how well you know how to set up git in your working directory.
-
-We will do this by looking at a specific example: 
-
-Let's say, you and your classmates are supposed to be working on a Data Analytics and Visualisation task using the built-in `mtcars` dataset, where each of you are working on a different part of the task. You come up with the idea to use git to help keep track of different versions when working together.
-
-```{r setup, include = FALSE}
-library(kofdata)
-# baro <- get_collection("ogd_ch.kof.barometer")
-# print(baro)
-# to print only part of the tslist
-# baro_df <- as.data.frame(baro)
-# print(baro_df[1:20, ])
-```
-```{r message = FALSE, warnings = FALSE}
-head(mtcars)
-```
-
+In this exercise we will test how well you know how to set up Git in your workin directory.
 
 ## Exercise 1
 
-How would you set up git in your working directory ?
+How would you set up Git in your working directory ?
 
 ::: {.callout-caution}
 ## Your turn!
-Identify the set of commands needed to set up git on your machine!
+Identify the set of commands needed to set up Git on your machine!
 :::
 
 :::{.quiz-multichoice}
@@ -61,7 +44,7 @@ Identify the commands needed to share your changes with others!
 - [X] [`git add`]{hint="o"}
 - [ ] [`git final`]{hint="x"}
 - [X] [`git commit`]{hint="o"}
-<!-- TODO: determine whether you need to add the whole command, e.g. `git commit -m "xyz"` -->
+<!-- TODO: determine whether you need to add the whole command, e.g. `Git commit -m "xyz"` -->
 - [ ] [`git pull`]{hint="x"}
 - [X] [`git push`]{hint="o"}
 :::
@@ -91,6 +74,22 @@ Let's say you while you were away, you aren't sure whether your teammates were w
 
 :::
 
+
+## Exercise 3
+
+Commit messages are a good way to document your progress, for yourself and your teammates 
+
+::: {.callout-caution}
+## Your turn!
+Tick the following commit messages which you should avoid!
+:::
+
+:::{.quiz-multichoice}
+- [X] [deleted files]{hint="o"}
+- [ ] [fixed typo in readme.md]{hint="x"}
+- [X] [small changes]{hint="o"}
+- [X] [quick working session]{hint="o"}
+:::
 <!-- # Git Merge Conflicts
 
 You and your colleagues were dilligent in your collaboration, but for some unknown reason, you still get the following output when trying to push your changes:
@@ -129,4 +128,12 @@ and have 1 and 2 different commits each, respectively.
 - [ ] [`git pull`]{hint="x"}
 - [X] [`git rebase`]{hint="o"}
 - [X] [`git merge`]{hint="o"}
+:::
+
+::: {.callout-caution}
+If you have had trouble with these exercises, you might want to try the following resources:
+
+- [H4Sci-Tasks 1-3](https://github.com/h4sci/h4sci-tasks/issues)
+- [Git Katas](https://github.com/eficode-academy/git-katas)
+
 :::

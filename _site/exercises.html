@@ -138,6 +138,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#exercise-1-1" id="toc-exercise-1-1" class="nav-link" data-scroll-target="#exercise-1-1">Exercise 1</a></li>
   <li><a href="#exercise-2-1" id="toc-exercise-2-1" class="nav-link" data-scroll-target="#exercise-2-1">Exercise 2</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
   </ul></li>
   <li><a href="#git-diverging-branches" id="toc-git-diverging-branches" class="nav-link" data-scroll-target="#git-diverging-branches">Git Diverging Branches</a>
   <ul class="collapse">
@@ -154,24 +155,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="git-setup" class="level1">
 <h1>Git Setup</h1>
-<p>In this exercise we will test how well you know how to set up git in your working directory.</p>
-<p>We will do this by looking at a specific example:</p>
-<p>Let’s say, you and your classmates are supposed to be working on a Data Analytics and Visualisation task using the built-in <code>mtcars</code> dataset, where each of you are working on a different part of the task. You come up with the idea to use git to help keep track of different versions when working together.</p>
-<div class="cell" data-warnings="false">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>                   mpg cyl disp  hp drat    wt  qsec vs am gear carb
-Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
-Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
-Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
-Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
-Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
-Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
-</div>
-</div>
+<p>In this exercise we will test how well you know how to set up Git in your workin directory.</p>
 <section id="exercise-1" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
-<p>How would you set up git in your working directory ?</p>
+<p>How would you set up Git in your working directory ?</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -182,7 +169,7 @@ Your turn!
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Identify the set of commands needed to set up git on your machine!</p>
+<p>Identify the set of commands needed to set up Git on your machine!</p>
 </div>
 </div>
 <div id="qforms-quiz-1" class="radio-group">
@@ -474,34 +461,23 @@ Your turn!
 </style>
 
 
-<!-- # Git Merge Conflicts
-
-You and your colleagues were dilligent in your collaboration, but for some unknown reason, you still get the following output when trying to push your changes:
-
-```bash
-CONFLICT (content): Merge conflict in file-name.txt
-Automatic merge failed; fix conflicts and then commit the result.
-```
-
-How would you go about fixing this?
-
-:::{.quiz-multichoice}
-
-- [X] [check in which file the conflict happened]{hint="o"}
-- [X] []{hint="o"}
-- [ ] [`git push`]{hint="x"}
-
-::: -->
 </section>
-</section>
-<section id="git-diverging-branches" class="level1">
-<h1>Git Diverging Branches</h1>
-<p>You and a colleague have been working on a project, but someone forgot to pull before re-starting the work. Now Git tells you that you have diverging branches. How do you deal with this issue?</p>
-<section id="exercise-1-2" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1-2">Exercise 1</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> branch and <span class="st">'origin/main'</span> have diverged,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">and</span> have 1 and 2 different commits each, respectively.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="exercise-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
+<p>Commit messages are a good way to document your progress, for yourself and your teammates</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your turn!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tick the following commit messages which you should avoid!</p>
+</div>
+</div>
 <div id="qforms-quiz-5" class="radio-group">
 </div>
 
@@ -509,8 +485,8 @@ How would you go about fixing this?
   var compareArrays = (a, b) =>
     a.length === b.length && a.every((element, index) => element === b[index]);
   var quiz_container = document.getElementById("qforms-quiz-5");
-  var questions = "git pull,git rebase,git merge";
-  var hints = "x,o,o"
+  var questions = "deleted files,fixed typo in readme.md,small changes,quick working session";
+  var hints = "o,x,o,o"
   console.log("hints", hints)
   questions = questions.split(",");
   hints = hints.split(",");
@@ -547,6 +523,99 @@ How would you go about fixing this?
     var selected = document.querySelectorAll('input[name=qforms-quiz-name-5]:checked')
     var values = Array.from(selected).map(element => element.value);
     var results = document.getElementById("qforms-quiz-results-5")
+    var solutions = "1,3,4".split(",")
+    if(selected != undefined) {
+      var success = compareArrays(values, solutions)
+      results.classList.toggle(success ? "success": "failure")
+      results.textContent = success ? "✅ That's correct!": "❌ Incorrect, try again!"
+    }
+
+  })
+  quiz_container.append(submit_btn)
+
+  quiz_container.append(result_section)
+</script>
+
+<style>
+  input.quiz-radio {
+    margin: 0.4rem;
+  }
+</style>
+
+
+<!-- # Git Merge Conflicts
+
+You and your colleagues were dilligent in your collaboration, but for some unknown reason, you still get the following output when trying to push your changes:
+
+```bash
+CONFLICT (content): Merge conflict in file-name.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+How would you go about fixing this?
+
+:::{.quiz-multichoice}
+
+- [X] [check in which file the conflict happened]{hint="o"}
+- [X] []{hint="o"}
+- [ ] [`git push`]{hint="x"}
+
+::: -->
+</section>
+</section>
+<section id="git-diverging-branches" class="level1">
+<h1>Git Diverging Branches</h1>
+<p>You and a colleague have been working on a project, but someone forgot to pull before re-starting the work. Now Git tells you that you have diverging branches. How do you deal with this issue?</p>
+<section id="exercise-1-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1-2">Exercise 1</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> branch and <span class="st">'origin/main'</span> have diverged,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">and</span> have 1 and 2 different commits each, respectively.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="qforms-quiz-6" class="radio-group">
+</div>
+
+<script>
+  var compareArrays = (a, b) =>
+    a.length === b.length && a.every((element, index) => element === b[index]);
+  var quiz_container = document.getElementById("qforms-quiz-6");
+  var questions = "git pull,git rebase,git merge";
+  var hints = "x,o,o"
+  console.log("hints", hints)
+  questions = questions.split(",");
+  hints = hints.split(",");
+
+    for([index, question] of questions.entries()) {
+      var radio_row = document.createElement("div");
+
+      var label = document.createElement("label");
+      label.setAttribute("class", "radio-label");
+      label.setAttribute("for", question);
+      label.textContent = question;
+
+      var input_elem = document.createElement("input");
+      input_elem.setAttribute("type", "checkbox");
+      input_elem.setAttribute("class", "quiz-radio");
+      input_elem.setAttribute("name", `qforms-quiz-name-6`);
+      input_elem.setAttribute("value", (index+1));
+
+      radio_row.append(input_elem, label);
+      quiz_container.append(radio_row);
+  }
+
+
+  var result_section = document.createElement("p")
+  result_section.setAttribute("id", "qforms-quiz-results-6")
+  result_section.setAttribute("class", "result-section")
+
+  var submit_btn = document.createElement("input")
+  submit_btn.setAttribute("type", "button")
+  submit_btn.setAttribute("id", "qforms-quiz-submit-6")
+  submit_btn.setAttribute("class", "submit-btn")
+  submit_btn.setAttribute("value", "Submit")
+  submit_btn.addEventListener("click", event => {
+    var selected = document.querySelectorAll('input[name=qforms-quiz-name-6]:checked')
+    var values = Array.from(selected).map(element => element.value);
+    var results = document.getElementById("qforms-quiz-results-6")
     var solutions = "2,3".split(",")
     if(selected != undefined) {
       var success = compareArrays(values, solutions)
@@ -567,6 +636,23 @@ How would you go about fixing this?
 </style>
 
 
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you have had trouble with these exercises, you might want to try the following resources:</p>
+<ul>
+<li><a href="https://github.com/h4sci/h4sci-tasks/issues">H4Sci-Tasks 1-3</a></li>
+<li><a href="https://github.com/eficode-academy/git-katas">Git Katas</a></li>
+</ul>
+</div>
+</div>
 
 
 </section>
