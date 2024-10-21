@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "exercises.html",
+    "href": "exercises.html",
+    "title": "Git Setup",
+    "section": "",
+    "text": "In this exercise we will test how well you know how to set up Git in your workin directory.\n\n\nHow would you set up Git in your working directory ?\n\n\n\n\n\n\nYour turn!\n\n\n\nIdentify the set of commands needed to set up Git on your machine!\n\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s say you changed, added or removed some files in the course of your work. How will you make these changes known to your colleagues?\n\n\n\n\n\n\nYour turn!\n\n\n\nIdentify the commands needed to share your changes with others!"
+  },
+  {
+    "objectID": "exercises.html#exercise-1",
+    "href": "exercises.html#exercise-1",
+    "title": "Git Setup",
+    "section": "",
+    "text": "How would you set up Git in your working directory ?\n\n\n\n\n\n\nYour turn!\n\n\n\nIdentify the set of commands needed to set up Git on your machine!"
+  },
+  {
+    "objectID": "exercises.html#exercise-2",
+    "href": "exercises.html#exercise-2",
+    "title": "Git Setup",
+    "section": "",
+    "text": "Let’s say you changed, added or removed some files in the course of your work. How will you make these changes known to your colleagues?\n\n\n\n\n\n\nYour turn!\n\n\n\nIdentify the commands needed to share your changes with others!"
+  },
+  {
+    "objectID": "exercises.html#exercise-1-1",
+    "href": "exercises.html#exercise-1-1",
+    "title": "Git Setup",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nHow do you go about ensuring that you don’t get in eachothers way when working?"
+  },
+  {
+    "objectID": "exercises.html#exercise-2-1",
+    "href": "exercises.html#exercise-2-1",
+    "title": "Git Setup",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nLet’s say you while you were away, you aren’t sure whether your teammates were working on your project or not. What do you do before working again?"
+  },
+  {
+    "objectID": "exercises.html#exercise-3",
+    "href": "exercises.html#exercise-3",
+    "title": "Git Setup",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nCommit messages are a good way to document your progress, for yourself and your teammates\n\n\n\n\n\n\nYour turn!\n\n\n\nTick the following commit messages which you should avoid!"
+  },
+  {
+    "objectID": "exercises.html#exercise-1-2",
+    "href": "exercises.html#exercise-1-2",
+    "title": "Git Setup",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nOn branch main\nYour branch and 'origin/main' have diverged,\nand have 1 and 2 different commits each, respectively.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nIf you have had trouble with these exercises, you might want to try the following resources:\n\nH4Sci-Tasks 1-3\nGit Katas"
+  }
+]
