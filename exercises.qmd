@@ -120,19 +120,24 @@ How would you go about fixing this?
 You and a colleague have been working on a project, but someone forgot to pull before re-starting the work. 
 Now Git tells you that you have diverging branches. How do you deal with this issue?
 
-## Exercise 1
-
 ```bash
 On branch main
 Your branch and 'origin/main' have diverged,
 and have 1 and 2 different commits each, respectively.
 ```
 
+## Exercise 1
+
+::: {.callout-caution}
+Cross all options which you could use to solve the issue of diverging branches.
+:::
+
 :::{.quiz-multichoice}
 - [ ] [`git pull`]{hint="x"}
 - [X] [`git rebase`]{hint="o"}
 - [X] [`git merge`]{hint="o"}
 :::
+ 
 
 ::: {.callout-caution}
 If you have had trouble with these exercises, you might want to try the following resources:
