@@ -1,8 +1,8 @@
 ---
-# format:
-  # html: 
-  #   output-file: "index"
-  #   output-ext:  "html"
+format:
+  html: 
+    output-file: "programming_exercises"
+    output-ext:  "html"
 editor: source
 engine: knitr
 filters:
