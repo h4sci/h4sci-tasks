@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>exercises – H4Sci Exercises</title>
+<title>H4Sci Exercises</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -114,9 +80,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">H4Sci Exercises</span>
     </a>
   </div>
-        <div class="quarto-navbar-tools tools-end">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./git_exercises.html"> 
+<span class="menu-text">Git Exercises</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./programming_exercises.html"> 
+<span class="menu-text">Programming Exercises</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
 </div>
-          <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -124,28 +105,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#git-setup" id="toc-git-setup" class="nav-link active" data-scroll-target="#git-setup">Git Setup</a>
-  <ul class="collapse">
-  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
-  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
-  </ul></li>
-  <li><a href="#git-collaboration" id="toc-git-collaboration" class="nav-link" data-scroll-target="#git-collaboration">Git Collaboration</a>
-  <ul class="collapse">
-  <li><a href="#exercise-1-1" id="toc-exercise-1-1" class="nav-link" data-scroll-target="#exercise-1-1">Exercise 1</a></li>
-  <li><a href="#exercise-2-1" id="toc-exercise-2-1" class="nav-link" data-scroll-target="#exercise-2-1">Exercise 2</a></li>
-  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
-  </ul></li>
-  <li><a href="#git-diverging-branches" id="toc-git-diverging-branches" class="nav-link" data-scroll-target="#git-diverging-branches">Git Diverging Branches</a>
-  <ul class="collapse">
-  <li><a href="#exercise-1-2" id="toc-exercise-1-2" class="nav-link" data-scroll-target="#exercise-1-2">Exercise 1</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/h4sci/h4sci-tasks/edit/main/exercises.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/h4sci/h4sci-tasks/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -153,510 +114,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="git-setup" class="level1">
-<h1>Git Setup</h1>
-<p>In this exercise we will test how well you know how to set up Git in your workin directory.</p>
-<section id="exercise-1" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
-<p>How would you set up Git in your working directory ?</p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Your turn!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Identify the set of commands needed to set up Git on your machine!</p>
-</div>
-</div>
-<div id="qforms-quiz-1" class="radio-group">
-</div>
+<p>This website is aimed to test your knowledge of the course content you have learnt in the H4Sci Course. Click the links below to get started.</p>
+<p><a href="./git_exercises.html">Git Exercises - Block 1</a></p>
+<p><a href="./programming_exercises.html">Programming Exercises - Block 2</a></p>
 
-<script>
-  var compareArrays = (a, b) =>
-    a.length === b.length && a.every((element, index) => element === b[index]);
-  var quiz_container = document.getElementById("qforms-quiz-1");
-  var questions = "git init,git configuration,git start,git add";
-  var hints = "o,x,x,x"
-  console.log("hints", hints)
-  questions = questions.split(",");
-  hints = hints.split(",");
 
-    for([index, question] of questions.entries()) {
-      var radio_row = document.createElement("div");
-
-      var label = document.createElement("label");
-      label.setAttribute("class", "radio-label");
-      label.setAttribute("for", question);
-      label.textContent = question;
-
-      var input_elem = document.createElement("input");
-      input_elem.setAttribute("type", "checkbox");
-      input_elem.setAttribute("class", "quiz-radio");
-      input_elem.setAttribute("name", `qforms-quiz-name-1`);
-      input_elem.setAttribute("value", (index+1));
-
-      radio_row.append(input_elem, label);
-      quiz_container.append(radio_row);
-  }
-
-
-  var result_section = document.createElement("p")
-  result_section.setAttribute("id", "qforms-quiz-results-1")
-  result_section.setAttribute("class", "result-section")
-
-  var submit_btn = document.createElement("input")
-  submit_btn.setAttribute("type", "button")
-  submit_btn.setAttribute("id", "qforms-quiz-submit-1")
-  submit_btn.setAttribute("class", "submit-btn")
-  submit_btn.setAttribute("value", "Submit")
-  submit_btn.addEventListener("click", event => {
-    var selected = document.querySelectorAll('input[name=qforms-quiz-name-1]:checked')
-    var values = Array.from(selected).map(element => element.value);
-    var results = document.getElementById("qforms-quiz-results-1")
-    var solutions = "1".split(",")
-    if(selected != undefined) {
-      var success = compareArrays(values, solutions)
-      results.classList.toggle(success ? "success": "failure")
-      results.textContent = success ? "✅ That's correct!": "❌ Incorrect, try again!"
-    }
-
-  })
-  quiz_container.append(submit_btn)
-
-  quiz_container.append(result_section)
-</script>
-
-<style>
-  input.quiz-radio {
-    margin: 0.4rem;
-  }
-</style>
-
-
-</section>
-<section id="exercise-2" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
-<p>Let’s say you changed, added or removed some files in the course of your work. How will you make these changes known to your colleagues?</p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Your turn!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Identify the commands needed to share your changes with others!</p>
-</div>
-</div>
-<div id="qforms-quiz-2" class="radio-group">
-</div>
-
-<script>
-  var compareArrays = (a, b) =>
-    a.length === b.length && a.every((element, index) => element === b[index]);
-  var quiz_container = document.getElementById("qforms-quiz-2");
-  var questions = "git add,git final,git commit,git pull,git push";
-  var hints = "o,x,o,x,o"
-  console.log("hints", hints)
-  questions = questions.split(",");
-  hints = hints.split(",");
-
-    for([index, question] of questions.entries()) {
-      var radio_row = document.createElement("div");
-
-      var label = document.createElement("label");
-      label.setAttribute("class", "radio-label");
-      label.setAttribute("for", question);
-      label.textContent = question;
-
-      var input_elem = document.createElement("input");
-      input_elem.setAttribute("type", "checkbox");
-      input_elem.setAttribute("class", "quiz-radio");
-      input_elem.setAttribute("name", `qforms-quiz-name-2`);
-      input_elem.setAttribute("value", (index+1));
-
-      radio_row.append(input_elem, label);
-      quiz_container.append(radio_row);
-  }
-
-
-  var result_section = document.createElement("p")
-  result_section.setAttribute("id", "qforms-quiz-results-2")
-  result_section.setAttribute("class", "result-section")
-
-  var submit_btn = document.createElement("input")
-  submit_btn.setAttribute("type", "button")
-  submit_btn.setAttribute("id", "qforms-quiz-submit-2")
-  submit_btn.setAttribute("class", "submit-btn")
-  submit_btn.setAttribute("value", "Submit")
-  submit_btn.addEventListener("click", event => {
-    var selected = document.querySelectorAll('input[name=qforms-quiz-name-2]:checked')
-    var values = Array.from(selected).map(element => element.value);
-    var results = document.getElementById("qforms-quiz-results-2")
-    var solutions = "1,3,5".split(",")
-    if(selected != undefined) {
-      var success = compareArrays(values, solutions)
-      results.classList.toggle(success ? "success": "failure")
-      results.textContent = success ? "✅ That's correct!": "❌ Incorrect, try again!"
-    }
-
-  })
-  quiz_container.append(submit_btn)
-
-  quiz_container.append(result_section)
-</script>
-
-<style>
-  input.quiz-radio {
-    margin: 0.4rem;
-  }
-</style>
-
-
-</section>
-</section>
-<section id="git-collaboration" class="level1">
-<h1>Git Collaboration</h1>
-<p>Now that you’ve set up your repository and shared your first commit with your teammates, you want to work on them together, and possibly simultaneously.</p>
-<section id="exercise-1-1" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1-1">Exercise 1</h2>
-<p>How do you go about ensuring that you don’t get in eachothers way when working?</p>
-<div id="qforms-quiz-3" class="radio-group">
-</div>
-
-<script>
-  var compareArrays = (a, b) =>
-    a.length === b.length && a.every((element, index) => element === b[index]);
-  var quiz_container = document.getElementById("qforms-quiz-3");
-  var questions = "Create a new branch,Create a new repository,Proceed as is";
-  var hints = "o,x,x"
-  console.log("hints", hints)
-  questions = questions.split(",");
-  hints = hints.split(",");
-
-    for([index, question] of questions.entries()) {
-      var radio_row = document.createElement("div");
-
-      var label = document.createElement("label");
-      label.setAttribute("class", "radio-label");
-      label.setAttribute("for", question);
-      label.textContent = question;
-
-      var input_elem = document.createElement("input");
-      input_elem.setAttribute("type", "checkbox");
-      input_elem.setAttribute("class", "quiz-radio");
-      input_elem.setAttribute("name", `qforms-quiz-name-3`);
-      input_elem.setAttribute("value", (index+1));
-
-      radio_row.append(input_elem, label);
-      quiz_container.append(radio_row);
-  }
-
-
-  var result_section = document.createElement("p")
-  result_section.setAttribute("id", "qforms-quiz-results-3")
-  result_section.setAttribute("class", "result-section")
-
-  var submit_btn = document.createElement("input")
-  submit_btn.setAttribute("type", "button")
-  submit_btn.setAttribute("id", "qforms-quiz-submit-3")
-  submit_btn.setAttribute("class", "submit-btn")
-  submit_btn.setAttribute("value", "Submit")
-  submit_btn.addEventListener("click", event => {
-    var selected = document.querySelectorAll('input[name=qforms-quiz-name-3]:checked')
-    var values = Array.from(selected).map(element => element.value);
-    var results = document.getElementById("qforms-quiz-results-3")
-    var solutions = "1".split(",")
-    if(selected != undefined) {
-      var success = compareArrays(values, solutions)
-      results.classList.toggle(success ? "success": "failure")
-      results.textContent = success ? "✅ That's correct!": "❌ Incorrect, try again!"
-    }
-
-  })
-  quiz_container.append(submit_btn)
-
-  quiz_container.append(result_section)
-</script>
-
-<style>
-  input.quiz-radio {
-    margin: 0.4rem;
-  }
-</style>
-
-
-</section>
-<section id="exercise-2-1" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-2-1">Exercise 2</h2>
-<p>Let’s say you while you were away, you aren’t sure whether your teammates were working on your project or not. What do you do before working again?</p>
-<div id="qforms-quiz-4" class="radio-group">
-</div>
-
-<script>
-  var compareArrays = (a, b) =>
-    a.length === b.length && a.every((element, index) => element === b[index]);
-  var quiz_container = document.getElementById("qforms-quiz-4");
-  var questions = "Ask them,git pull,git push";
-  var hints = "x,o,x"
-  console.log("hints", hints)
-  questions = questions.split(",");
-  hints = hints.split(",");
-
-    for([index, question] of questions.entries()) {
-      var radio_row = document.createElement("div");
-
-      var label = document.createElement("label");
-      label.setAttribute("class", "radio-label");
-      label.setAttribute("for", question);
-      label.textContent = question;
-
-      var input_elem = document.createElement("input");
-      input_elem.setAttribute("type", "checkbox");
-      input_elem.setAttribute("class", "quiz-radio");
-      input_elem.setAttribute("name", `qforms-quiz-name-4`);
-      input_elem.setAttribute("value", (index+1));
-
-      radio_row.append(input_elem, label);
-      quiz_container.append(radio_row);
-  }
-
-
-  var result_section = document.createElement("p")
-  result_section.setAttribute("id", "qforms-quiz-results-4")
-  result_section.setAttribute("class", "result-section")
-
-  var submit_btn = document.createElement("input")
-  submit_btn.setAttribute("type", "button")
-  submit_btn.setAttribute("id", "qforms-quiz-submit-4")
-  submit_btn.setAttribute("class", "submit-btn")
-  submit_btn.setAttribute("value", "Submit")
-  submit_btn.addEventListener("click", event => {
-    var selected = document.querySelectorAll('input[name=qforms-quiz-name-4]:checked')
-    var values = Array.from(selected).map(element => element.value);
-    var results = document.getElementById("qforms-quiz-results-4")
-    var solutions = "2".split(",")
-    if(selected != undefined) {
-      var success = compareArrays(values, solutions)
-      results.classList.toggle(success ? "success": "failure")
-      results.textContent = success ? "✅ That's correct!": "❌ Incorrect, try again!"
-    }
-
-  })
-  quiz_container.append(submit_btn)
-
-  quiz_container.append(result_section)
-</script>
-
-<style>
-  input.quiz-radio {
-    margin: 0.4rem;
-  }
-</style>
-
-
-</section>
-<section id="exercise-3" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
-<p>Commit messages are a good way to document your progress, for yourself and your teammates</p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Your turn!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Tick the following commit messages which you should avoid!</p>
-</div>
-</div>
-<div id="qforms-quiz-5" class="radio-group">
-</div>
-
-<script>
-  var compareArrays = (a, b) =>
-    a.length === b.length && a.every((element, index) => element === b[index]);
-  var quiz_container = document.getElementById("qforms-quiz-5");
-  var questions = "deleted files,fixed typo in readme.md,small changes,quick working session";
-  var hints = "o,x,o,o"
-  console.log("hints", hints)
-  questions = questions.split(",");
-  hints = hints.split(",");
-
-    for([index, question] of questions.entries()) {
-      var radio_row = document.createElement("div");
-
-      var label = document.createElement("label");
-      label.setAttribute("class", "radio-label");
-      label.setAttribute("for", question);
-      label.textContent = question;
-
-      var input_elem = document.createElement("input");
-      input_elem.setAttribute("type", "checkbox");
-      input_elem.setAttribute("class", "quiz-radio");
-      input_elem.setAttribute("name", `qforms-quiz-name-5`);
-      input_elem.setAttribute("value", (index+1));
-
-      radio_row.append(input_elem, label);
-      quiz_container.append(radio_row);
-  }
-
-
-  var result_section = document.createElement("p")
-  result_section.setAttribute("id", "qforms-quiz-results-5")
-  result_section.setAttribute("class", "result-section")
-
-  var submit_btn = document.createElement("input")
-  submit_btn.setAttribute("type", "button")
-  submit_btn.setAttribute("id", "qforms-quiz-submit-5")
-  submit_btn.setAttribute("class", "submit-btn")
-  submit_btn.setAttribute("value", "Submit")
-  submit_btn.addEventListener("click", event => {
-    var selected = document.querySelectorAll('input[name=qforms-quiz-name-5]:checked')
-    var values = Array.from(selected).map(element => element.value);
-    var results = document.getElementById("qforms-quiz-results-5")
-    var solutions = "1,3,4".split(",")
-    if(selected != undefined) {
-      var success = compareArrays(values, solutions)
-      results.classList.toggle(success ? "success": "failure")
-      results.textContent = success ? "✅ That's correct!": "❌ Incorrect, try again!"
-    }
-
-  })
-  quiz_container.append(submit_btn)
-
-  quiz_container.append(result_section)
-</script>
-
-<style>
-  input.quiz-radio {
-    margin: 0.4rem;
-  }
-</style>
-
-
-<!-- # Git Merge Conflicts
-
-You and your colleagues were dilligent in your collaboration, but for some unknown reason, you still get the following output when trying to push your changes:
-
-```bash
-CONFLICT (content): Merge conflict in file-name.txt
-Automatic merge failed; fix conflicts and then commit the result.
-```
-
-How would you go about fixing this?
-
-:::{.quiz-multichoice}
-
-- [X] [check in which file the conflict happened]{hint="o"}
-- [X] []{hint="o"}
-- [ ] [`git push`]{hint="x"}
-
-::: -->
-</section>
-</section>
-<section id="git-diverging-branches" class="level1">
-<h1>Git Diverging Branches</h1>
-<p>You and a colleague have been working on a project, but someone forgot to pull before re-starting the work. Now Git tells you that you have diverging branches. How do you deal with this issue?</p>
-<section id="exercise-1-2" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1-2">Exercise 1</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> branch and <span class="st">'origin/main'</span> have diverged,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">and</span> have 1 and 2 different commits each, respectively.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="qforms-quiz-6" class="radio-group">
-</div>
-
-<script>
-  var compareArrays = (a, b) =>
-    a.length === b.length && a.every((element, index) => element === b[index]);
-  var quiz_container = document.getElementById("qforms-quiz-6");
-  var questions = "git pull,git rebase,git merge";
-  var hints = "x,o,o"
-  console.log("hints", hints)
-  questions = questions.split(",");
-  hints = hints.split(",");
-
-    for([index, question] of questions.entries()) {
-      var radio_row = document.createElement("div");
-
-      var label = document.createElement("label");
-      label.setAttribute("class", "radio-label");
-      label.setAttribute("for", question);
-      label.textContent = question;
-
-      var input_elem = document.createElement("input");
-      input_elem.setAttribute("type", "checkbox");
-      input_elem.setAttribute("class", "quiz-radio");
-      input_elem.setAttribute("name", `qforms-quiz-name-6`);
-      input_elem.setAttribute("value", (index+1));
-
-      radio_row.append(input_elem, label);
-      quiz_container.append(radio_row);
-  }
-
-
-  var result_section = document.createElement("p")
-  result_section.setAttribute("id", "qforms-quiz-results-6")
-  result_section.setAttribute("class", "result-section")
-
-  var submit_btn = document.createElement("input")
-  submit_btn.setAttribute("type", "button")
-  submit_btn.setAttribute("id", "qforms-quiz-submit-6")
-  submit_btn.setAttribute("class", "submit-btn")
-  submit_btn.setAttribute("value", "Submit")
-  submit_btn.addEventListener("click", event => {
-    var selected = document.querySelectorAll('input[name=qforms-quiz-name-6]:checked')
-    var values = Array.from(selected).map(element => element.value);
-    var results = document.getElementById("qforms-quiz-results-6")
-    var solutions = "2,3".split(",")
-    if(selected != undefined) {
-      var success = compareArrays(values, solutions)
-      results.classList.toggle(success ? "success": "failure")
-      results.textContent = success ? "✅ That's correct!": "❌ Incorrect, try again!"
-    }
-
-  })
-  quiz_container.append(submit_btn)
-
-  quiz_container.append(result_section)
-</script>
-
-<style>
-  input.quiz-radio {
-    margin: 0.4rem;
-  }
-</style>
-
-
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you have had trouble with these exercises, you might want to try the following resources:</p>
-<ul>
-<li><a href="https://github.com/h4sci/h4sci-tasks/issues">H4Sci-Tasks 1-3</a></li>
-<li><a href="https://github.com/eficode-academy/git-katas">Git Katas</a></li>
-</ul>
-</div>
-</div>
-
-
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1087,7 +549,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/h4sci/h4sci-tasks/edit/main/exercises.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/h4sci/h4sci-tasks/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/h4sci/h4sci-tasks/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/h4sci/h4sci-tasks/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
