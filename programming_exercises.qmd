@@ -1,0 +1,244 @@
+---
+# format:
+  # html: 
+  #   output-file: "index"
+  #   output-ext:  "html"
+editor: source
+engine: knitr
+filters:
+  - webr-teachr
+  - quiz-teachr
+webr:
+  packages: ["reticulate"]
+  autoload-packages: false
+---
+
+```{r setup, include=FALSE}
+library(reticulate)
+use_python("/usr/bin/python3")
+```
+# Programming Exercises
+
+
+## Exercise 1
+
+What is the evolution path of code, ideally?
+
+:::{.quiz-multichoice}
+- [ ] [module -> script -> function]{hint="x"}
+- [X] [script -> functions -> package]{hint="o"}
+- [ ] [functions -> package -> script]{hint="x"}
+- [ ] [package -> class -> functions]{hint="x"}
+:::
+
+
+## Exercise 2
+
+Which of these types of data is most persistent?
+
+:::{.quiz-multichoice}
+- [ ] [data in memory]{hint="x"}
+- [X] [data on disk]{hint="o"}
+- [X] [data in storage]{hint="o"}
+:::
+
+## Exercise 3
+Which of these file formats are interoperable?
+
+:::{.quiz-multichoice}
+
+- [X] [parquet]{hint="o"}
+- [ ] [.RData]{hint="x"}
+- [X] [.csv]{hint="o"}
+- [ ] [.xlsx]{hint="x"}
+- [ ] [.Dta]{hint="x"}
+:::
+
+## Exercise 4
+
+Which of these file formats are binary? 
+
+:::{.quiz-multichoice}
+
+- [ ] [.csv]{hint="x"}
+- [X] [.xlsx]{hint="o"}
+- [ ] [.xml]{hint="x"}
+- [ ] [.json]{hint="x"}
+- [X] [.jpeg]{hint="o"}
+<!-- TODO: check if this is true -->
+:::
+
+::: {.callout-caution}
+## Your turn!
+Think about what format the non-binary file formats are in!
+:::
+
+
+## Exercise 5
+
+What are the ideal ways to store nested data on disk (in a file)?
+
+:::{.quiz-multichoice}
+- [X] [.json]{hint="o"}
+- [ ] [.csv]{hint="x"}
+- [X] [.yaml]{hint="o"}
+- [ ] [.xlsx]{hint="x"}
+:::
+
+## Exercise 6
+<!-- TODO: make example better, multiple code blocks  -->
+Let's compare the Task 2.1 on sorting students to cards in R and Python: 
+
+::: {.callout-caution}
+## Your turn!
+Without looking at the answers, try to guess what the result would be in python and R, and then check your answer!
+:::
+
+```r
+cards <- c("Kings", "Jack", "Aces", "Queens", "Tens")
+students <- create_students(20)
+
+split <- split_students(students, cards)
+res <- split
+
+res2 <- res
+res2[["Kings"]] <- c("Student A", "Student B") 
+
+print(res)
+print(res2)
+```
+<details> 
+<summary>Answer</summary>
+```{r, echo=FALSE}
+library(stringr)
+
+create_students <- function(num_students) {
+  students <- paste("Student", substr(LETTERS, 1, num_students))
+  return(students)
+}
+
+split_students <- function(students, groups) {
+  n <- length(students) %/% length(groups)
+  remainder <- length(students) %% length(groups)  
+  
+  split <- list()
+  start <- 1
+  for (i in seq_along(groups)) {
+    end <- start + n - 1 + ifelse(i <= remainder, 1, 0)
+    split[[i]] <- students[start:end]
+    start <- end + 1
+  }
+  
+  names(split) <- groups
+  return(split)
+}
+
+cards <- c("Kings", "Jack", "Aces", "Queens", "Tens")
+students <- create_students(20)
+
+split <- split_students(students, cards)
+res <- split
+
+res2 <- res
+res2[["Kings"]] <- c("Student A", "Student B") 
+
+
+print("res -----------------")
+print(res)
+print("res2 -----------------")
+print(res2)
+
+```
+</details> 
+
+
+```python
+from string import ascii_uppercase
+
+def create_students(num_students):
+    return [f"Student {ascii_uppercase[i]}" for i in range(num_students)]
+
+def split_students(students, groups):
+
+    n = len(students) // len(groups)
+    remainder = len(students) % len(groups)
+    split = []
+    start = 0
+    for i in range(len(groups)):
+        end = start + n + (1 if i < remainder else 0)
+        split.append(students[start:end])
+        start = end
+    return split
+
+cards = ["Kings", "Jack", "Aces", "Queens", "Tens"]
+students = create_students(20)
+
+split = split_students(students, cards)
+res = dict(zip(cards, split))
+
+## Now compare the result of creating a reference with the one in python 
+res2 = res
+# if we change res2, does res change?
+res2["Kings"] = ["Student A", "Student B"]
+
+print(f"{res=}")
+print(f"{res2=}")
+```
+<details> 
+<summary>Answer</summary>
+```{python, echo=FALSE}
+from string import ascii_uppercase
+
+
+def create_students(num_students):
+    return [f"Student {ascii_uppercase[i]}" for i in range(num_students)]
+
+
+def split_students(students, groups):
+
+    n = len(students) // len(groups)
+    remainder = len(students) % len(groups)
+    split = []
+    start = 0
+    for i in range(len(groups)):
+        # Distribute the remainder among the first 'remainder' groups
+        end = start + n + (1 if i < remainder else 0)
+        split.append(students[start:end])
+        start = end
+    return split
+
+
+cards = ["Kings", "Jack", "Aces", "Queens", "Tens"]
+students = create_students(20)
+
+split = split_students(students, cards)
+res = dict(zip(cards, split))
+
+res2 = res
+res2["Kings"] = ["Student A", "Student B"]
+print(f"{res=}")
+print(f"{res2=}")
+```
+
+</details> 
+
+<!-- my example:
+from string import ascii_uppercase
+
+cards = ["Kings", "Jack", "Aces", "Queens", "Tens"]
+l = []
+d = {}
+for i in list(ascii_uppercase)[:20]:
+    stu = f"Student {i}"
+    l.append(stu)
+
+# maybe split acc. to len of cards
+n = len(l) // len(cards)
+
+split = [l[i : i + n - 1] for i in range(0, len(l), n - 1)]
+# print(split)
+
+res = dict(zip(cards, split))
+print(res)
+ -->
+

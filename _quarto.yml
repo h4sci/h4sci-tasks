@@ -14,7 +14,6 @@ website:
   site-url: "https://h4sci.github.io/h4sci-tasks/index.html"
   repo-url: https://github.com/h4sci/h4sci-tasks
   repo-actions: [edit, issue]
-
   page-footer:
     left: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
     background: "#426D98"
@@ -22,7 +21,9 @@ website:
   navbar:
     background: "#426D98"
     pinned: true
-    align: center
+    left:
+      - git_exercises.qmd
+      - programming_exercises.qmd
 
 
 format:

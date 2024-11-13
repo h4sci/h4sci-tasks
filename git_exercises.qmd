@@ -1,8 +1,8 @@
 ---
-format:
-  html: 
-    output-file: "index"
-    output-ext:  "html"
+# format:
+  # html: 
+  #   output-file: "index"
+  #   output-ext:  "html"
 editor: source
 engine: knitr
 filters:
@@ -14,7 +14,7 @@ webr:
 ---
 
 
-# Git Setup
+# Git Exercises
 
 In this exercise we will test how well you know how to set up Git in your workin directory.
 

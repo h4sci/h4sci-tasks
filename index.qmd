@@ -1,0 +1,20 @@
+---
+format:
+  html: 
+    output-file: "index"
+    output-ext:  "html"
+editor: source
+engine: knitr
+filters:
+  - webr-teachr
+  - quiz-teachr
+webr:
+  # packages: ["kofdata"]
+  autoload-packages: false
+---
+
+This website is aimed to test your knowledge of the course content you have learnt in the H4Sci Course. Click the links below to get started.
+
+[Git Exercises - Block 1](git_exercises.qmd)
+
+[Programming Exercises - Block 2](programming_exercises.qmd)
