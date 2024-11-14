@@ -151,7 +151,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
   <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4">Exercise 4</a></li>
   <li><a href="#exercise-5" id="toc-exercise-5" class="nav-link" data-scroll-target="#exercise-5">Exercise 5</a></li>
-  <li><a href="#exercise-6" id="toc-exercise-6" class="nav-link" data-scroll-target="#exercise-6">Exercise 6</a></li>
+  <li><a href="#exercise-6" id="toc-exercise-6" class="nav-link" data-scroll-target="#exercise-6">Exercise 6:</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/h4sci/h4sci-tasks/edit/main/programming_exercises.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/h4sci/h4sci-tasks/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -164,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="programming-exercises" class="level1">
 <h1>Programming Exercises</h1>
-<p>This set of exercises is meant to test your knowledge of the concepts covered in block 2 of the course.</p>
+<p>This set of exercises is meant to test your knowledge of the concepts covered in block 2 of the course. All questions are Mulitple Choice!</p>
 <section id="exercise-1" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
 <p>What is the evolutionary path of code, ideally?</p>
@@ -244,7 +244,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   var compareArrays = (a, b) =>
     a.length === b.length && a.every((element, index) => element === b[index]);
   var quiz_container = document.getElementById("qforms-quiz-2");
-  var questions = "data in memory,data on disk (in a file),data in storage";
+  var questions = "data in memory,data on disk (in a file),data in storage (e.g. in a database)";
   var hints = "x,o,o"
   console.log("hints", hints)
   questions = questions.split(",");
@@ -382,7 +382,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   var compareArrays = (a, b) =>
     a.length === b.length && a.every((element, index) => element === b[index]);
   var quiz_container = document.getElementById("qforms-quiz-4");
-  var questions = ".csv,.xlsx,.xml,.json,.jpeg";
+  var questions = ".csv,.pdf,.xml,.json,.jpeg";
   var hints = "x,o,x,x,o"
   console.log("hints", hints)
   questions = questions.split(",");
@@ -524,9 +524,10 @@ Your turn!
 
 </section>
 <section id="exercise-6" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-6">Exercise 6</h2>
+<h2 class="anchored" data-anchor-id="exercise-6">Exercise 6:</h2>
 <!-- TODO: make example better, multiple code blocks  -->
-<p>Recall the Task 2.1 on sorting students to cards:</p>
+<p>Recall the Block 2 Task 1, where you had to create a program to assign students to groups:</p>
+<p>This could be a potential way of solving the problem in Python:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> string <span class="im">import</span> ascii_uppercase</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -569,7 +570,7 @@ Your turn!
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Without looking at the answers, try to guess what the result would be in python and R, when copying the result from above and changing following things. Then check your answer!</p>
+<p>Try to guess what the same implementations in R and Python would look like, when creating a copy of the variable and changing one of thes. Take a guess, and then check your answer!</p>
 </div>
 </div>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>res2 <span class="ot">&lt;-</span> res</span>
