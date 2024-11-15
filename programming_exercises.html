@@ -151,7 +151,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
   <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4">Exercise 4</a></li>
   <li><a href="#exercise-5" id="toc-exercise-5" class="nav-link" data-scroll-target="#exercise-5">Exercise 5</a></li>
-  <li><a href="#exercise-6" id="toc-exercise-6" class="nav-link" data-scroll-target="#exercise-6">Exercise 6:</a></li>
+  <li><a href="#exercise-6" id="toc-exercise-6" class="nav-link" data-scroll-target="#exercise-6">Exercise 6</a></li>
+  <li><a href="#exercise-7" id="toc-exercise-7" class="nav-link" data-scroll-target="#exercise-7">Exercise 7</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/h4sci/h4sci-tasks/edit/main/programming_exercises.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/h4sci/h4sci-tasks/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -236,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="exercise-2" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
-<p>Which of these types of data is most persistent?</p>
+<p>Which of these types of data is persistent?</p>
 <div id="qforms-quiz-2" class="radio-group">
 </div>
 
@@ -456,7 +457,7 @@ Your turn!
 </section>
 <section id="exercise-5" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-5">Exercise 5</h2>
-<p>What are the ideal ways to store nested data on disk (in a file)?</p>
+<p>What are the good ways to store nested data on disk (in a file)?</p>
 <div id="qforms-quiz-5" class="radio-group">
 </div>
 
@@ -464,8 +465,8 @@ Your turn!
   var compareArrays = (a, b) =>
     a.length === b.length && a.every((element, index) => element === b[index]);
   var quiz_container = document.getElementById("qforms-quiz-5");
-  var questions = ".json,.csv,.yaml,.xlsx";
-  var hints = "o,x,o,x"
+  var questions = ".json,.csv,.yaml,.xml,.xlsx";
+  var hints = "o,x,o,o,x"
   console.log("hints", hints)
   questions = questions.split(",");
   hints = hints.split(",");
@@ -502,7 +503,7 @@ Your turn!
     var selected = document.querySelectorAll('input[name=qforms-quiz-name-5]:checked')
     var values = Array.from(selected).map(element => element.value);
     var results = document.getElementById("qforms-quiz-results-5")
-    var solutions = "1,3".split(",")
+    var solutions = "1,3,4".split(",")
     if(selected != undefined) {
       var success = compareArrays(values, solutions)
       results.classList.toggle(success ? "success": "failure")
@@ -524,42 +525,149 @@ Your turn!
 
 </section>
 <section id="exercise-6" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-6">Exercise 6:</h2>
-<!-- TODO: make example better, multiple code blocks  -->
-<p>Recall the Block 2 Task 1, where you had to create a program to assign students to groups:</p>
-<p>This could be a potential way of solving the problem in Python:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> string <span class="im">import</span> ascii_uppercase</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_students(num_students):</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [<span class="ss">f"Student </span><span class="sc">{</span>ascii_uppercase[i]<span class="sc">}</span><span class="ss">"</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(num_students)]</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> split_students(students, groups):</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">len</span>(students) <span class="op">//</span> <span class="bu">len</span>(groups)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    remainder <span class="op">=</span> <span class="bu">len</span>(students) <span class="op">%</span> <span class="bu">len</span>(groups)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    split <span class="op">=</span> []</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(groups)):</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Distribute the remainder among the first 'remainder' groups</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        end <span class="op">=</span> start <span class="op">+</span> n <span class="op">+</span> (<span class="dv">1</span> <span class="cf">if</span> i <span class="op">&lt;</span> remainder <span class="cf">else</span> <span class="dv">0</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        split.append(students[start:end])</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        start <span class="op">=</span> end</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> split</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Define cards and create student list</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>cards <span class="op">=</span> [<span class="st">"Kings"</span>, <span class="st">"Jack"</span>, <span class="st">"Aces"</span>, <span class="st">"Queens"</span>, <span class="st">"Tens"</span>]</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>students <span class="op">=</span> create_students(<span class="dv">20</span>)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Split students and map to cards</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>split <span class="op">=</span> split_students(students, cards)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> <span class="bu">dict</span>(<span class="bu">zip</span>(cards, split))</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(res)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>{'Kings': ['Student A', 'Student B', 'Student C', 'Student D'], 'Jack': ['Student E', 'Student F', 'Student G', 'Student H'], 'Aces': ['Student I', 'Student J', 'Student K', 'Student L'], 'Queens': ['Student M', 'Student N', 'Student O', 'Student P'], 'Tens': ['Student Q', 'Student R', 'Student S', 'Student T']}</code></pre>
+<h2 class="anchored" data-anchor-id="exercise-6">Exercise 6</h2>
+<p>Guess what the following code snippet in <strong>Python</strong> would return</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>y.append(<span class="dv">4</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="qforms-quiz-6" class="radio-group">
 </div>
+
+<script>
+  var compareArrays = (a, b) =>
+    a.length === b.length && a.every((element, index) => element === b[index]);
+  var quiz_container = document.getElementById("qforms-quiz-6");
+  var questions = "list: 1-4,list: 1-3,list: 4";
+  var hints = "o,x,x"
+  console.log("hints", hints)
+  questions = questions.split(",");
+  hints = hints.split(",");
+
+    for([index, question] of questions.entries()) {
+      var radio_row = document.createElement("div");
+
+      var label = document.createElement("label");
+      label.setAttribute("class", "radio-label");
+      label.setAttribute("for", question);
+      label.textContent = question;
+
+      var input_elem = document.createElement("input");
+      input_elem.setAttribute("type", "checkbox");
+      input_elem.setAttribute("class", "quiz-radio");
+      input_elem.setAttribute("name", `qforms-quiz-name-6`);
+      input_elem.setAttribute("value", (index+1));
+
+      radio_row.append(input_elem, label);
+      quiz_container.append(radio_row);
+  }
+
+
+  var result_section = document.createElement("p")
+  result_section.setAttribute("id", "qforms-quiz-results-6")
+  result_section.setAttribute("class", "result-section")
+
+  var submit_btn = document.createElement("input")
+  submit_btn.setAttribute("type", "button")
+  submit_btn.setAttribute("id", "qforms-quiz-submit-6")
+  submit_btn.setAttribute("class", "submit-btn")
+  submit_btn.setAttribute("value", "Submit")
+  submit_btn.addEventListener("click", event => {
+    var selected = document.querySelectorAll('input[name=qforms-quiz-name-6]:checked')
+    var values = Array.from(selected).map(element => element.value);
+    var results = document.getElementById("qforms-quiz-results-6")
+    var solutions = "1".split(",")
+    if(selected != undefined) {
+      var success = compareArrays(values, solutions)
+      results.classList.toggle(success ? "success": "failure")
+      results.textContent = success ? "✅ That's correct!": "❌ Incorrect, try again!"
+    }
+
+  })
+  quiz_container.append(submit_btn)
+
+  quiz_container.append(result_section)
+</script>
+
+<style>
+  input.quiz-radio {
+    margin: 0.4rem;
+  }
+</style>
+
+
+</section>
+<section id="exercise-7" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-7">Exercise 7</h2>
+<p>Guess what the following code snippet in <strong>R</strong> would return</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> x</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(y,<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="qforms-quiz-7" class="radio-group">
 </div>
+
+<script>
+  var compareArrays = (a, b) =>
+    a.length === b.length && a.every((element, index) => element === b[index]);
+  var quiz_container = document.getElementById("qforms-quiz-7");
+  var questions = "list: 1-4,list: 1-3,list: 4";
+  var hints = "x,o,x"
+  console.log("hints", hints)
+  questions = questions.split(",");
+  hints = hints.split(",");
+
+    for([index, question] of questions.entries()) {
+      var radio_row = document.createElement("div");
+
+      var label = document.createElement("label");
+      label.setAttribute("class", "radio-label");
+      label.setAttribute("for", question);
+      label.textContent = question;
+
+      var input_elem = document.createElement("input");
+      input_elem.setAttribute("type", "checkbox");
+      input_elem.setAttribute("class", "quiz-radio");
+      input_elem.setAttribute("name", `qforms-quiz-name-7`);
+      input_elem.setAttribute("value", (index+1));
+
+      radio_row.append(input_elem, label);
+      quiz_container.append(radio_row);
+  }
+
+
+  var result_section = document.createElement("p")
+  result_section.setAttribute("id", "qforms-quiz-results-7")
+  result_section.setAttribute("class", "result-section")
+
+  var submit_btn = document.createElement("input")
+  submit_btn.setAttribute("type", "button")
+  submit_btn.setAttribute("id", "qforms-quiz-submit-7")
+  submit_btn.setAttribute("class", "submit-btn")
+  submit_btn.setAttribute("value", "Submit")
+  submit_btn.addEventListener("click", event => {
+    var selected = document.querySelectorAll('input[name=qforms-quiz-name-7]:checked')
+    var values = Array.from(selected).map(element => element.value);
+    var results = document.getElementById("qforms-quiz-results-7")
+    var solutions = "2".split(",")
+    if(selected != undefined) {
+      var success = compareArrays(values, solutions)
+      results.classList.toggle(success ? "success": "failure")
+      results.textContent = success ? "✅ That's correct!": "❌ Incorrect, try again!"
+    }
+
+  })
+  quiz_container.append(submit_btn)
+
+  quiz_container.append(result_section)
+</script>
+
+<style>
+  input.quiz-radio {
+    margin: 0.4rem;
+  }
+</style>
+
+
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -570,99 +678,9 @@ Your turn!
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Try to guess what the same implementations in R and Python would look like, when creating a copy of the variable and changing one of thes. Take a guess, and then check your answer!</p>
+<p>Try to replicate the same way R implements references in Python. Hint: shallow copy</p>
 </div>
 </div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>res2 <span class="ot">&lt;-</span> res</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>res2[[<span class="st">"Kings"</span>]] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Student A"</span>, <span class="st">"Student B"</span>) </span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"res -----------------"</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(res)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"res2 -----------------"</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(res2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<details>
-<summary>
-Answer
-</summary>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "res -----------------"</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>$Kings
-[1] "Student A" "Student B" "Student C" "Student D" "Student E" "Student F"
-
-$Jack
-[1] "Student G" "Student H" "Student I" "Student J" "Student K"
-
-$Aces
-[1] "Student L" "Student M" "Student N" "Student O" "Student P"
-
-$Queens
-[1] "Student Q" "Student R" "Student S" "Student T" "Student U"
-
-$Tens
-[1] "Student V" "Student W" "Student X" "Student Y" "Student Z"</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "res2 -----------------"</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>$Kings
-[1] "Student A" "Student B"
-
-$Jack
-[1] "Student G" "Student H" "Student I" "Student J" "Student K"
-
-$Aces
-[1] "Student L" "Student M" "Student N" "Student O" "Student P"
-
-$Queens
-[1] "Student Q" "Student R" "Student S" "Student T" "Student U"
-
-$Tens
-[1] "Student V" "Student W" "Student X" "Student Y" "Student Z"</code></pre>
-</div>
-</div>
-</details>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>res2 <span class="op">=</span> res</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># if we change res2, does res change?</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>res2[<span class="st">"Kings"</span>] <span class="op">=</span> [<span class="st">"Student A"</span>, <span class="st">"Student B"</span>]</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>res<span class="op">=</span><span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>res2<span class="op">=</span><span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<details>
-<summary>
-Answer
-</summary>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>res={'Kings': ['Student A', 'Student B'], 'Jack': ['Student E', 'Student F', 'Student G', 'Student H'], 'Aces': ['Student I', 'Student J', 'Student K', 'Student L'], 'Queens': ['Student M', 'Student N', 'Student O', 'Student P'], 'Tens': ['Student Q', 'Student R', 'Student S', 'Student T']}</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>res2={'Kings': ['Student A', 'Student B'], 'Jack': ['Student E', 'Student F', 'Student G', 'Student H'], 'Aces': ['Student I', 'Student J', 'Student K', 'Student L'], 'Queens': ['Student M', 'Student N', 'Student O', 'Student P'], 'Tens': ['Student Q', 'Student R', 'Student S', 'Student T']}</code></pre>
-</div>
-</div>
-</details>
-<!-- my example:
-from string import ascii_uppercase
-
-cards = ["Kings", "Jack", "Aces", "Queens", "Tens"]
-l = []
-d = {}
-for i in list(ascii_uppercase)[:20]:
-    stu = f"Student {i}"
-    l.append(stu)
-
-# maybe split acc. to len of cards
-n = len(l) // len(cards)
-
-split = [l[i : i + n - 1] for i in range(0, len(l), n - 1)]
-# print(split)
-
-res = dict(zip(cards, split))
-print(res)
- -->
 
 
 </section>
