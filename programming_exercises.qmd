@@ -35,7 +35,7 @@ What is the evolutionary path of code, ideally?
 
 ## Exercise 2
 
-Which of these types of data is most persistent?
+Which of these types of data is persistent?
 
 :::{.quiz-multichoice}
 - [ ] [data in memory]{hint="x"}
@@ -77,175 +77,53 @@ Think about what the underlying structure of the non-binary file formats might b
 
 ## Exercise 5
 
-What are the ideal ways to store nested data on disk (in a file)?
+What are the good ways to store nested data on disk (in a file)?
 
 :::{.quiz-multichoice}
 - [X] [.json]{hint="o"}
 - [ ] [.csv]{hint="x"}
 - [X] [.yaml]{hint="o"}
+- [X] [.xml]{hint="o"}
 - [ ] [.xlsx]{hint="x"}
 :::
 
-## Exercise 6:
-<!-- TODO: make example better, multiple code blocks  -->
-Recall the Block 2 Task 1, where you had to create a program to assign students to groups: 
+## Exercise 6
 
-This could be a potential way of solving the problem in Python:
+Guess what the following code snippet in **Python** would return 
 
-```{python}
-from string import ascii_uppercase
-
-def create_students(num_students):
-    return [f"Student {ascii_uppercase[i]}" for i in range(num_students)]
-
-def split_students(students, groups):
-
-    n = len(students) // len(groups)
-    remainder = len(students) % len(groups)
-    split = []
-    start = 0
-    for i in range(len(groups)):
-        # Distribute the remainder among the first 'remainder' groups
-        end = start + n + (1 if i < remainder else 0)
-        split.append(students[start:end])
-        start = end
-    return split
-
-# Define cards and create student list
-cards = ["Kings", "Jack", "Aces", "Queens", "Tens"]
-students = create_students(20)
-
-# Split students and map to cards
-split = split_students(students, cards)
-res = dict(zip(cards, split))
-
-print(res)
+```python
+x = [1, 2, 3]
+y = x
+y.append(4)
+print(x)
 ```
+:::{.quiz-multichoice}
+- [X] [list: 1-4]{hint="o"}
+- [ ] [list: 1-3]{hint="x"}
+- [ ] [list: 4]{hint="x"}
+:::
+
+
+## Exercise 7
+
+Guess what the following code snippet in **R** would return 
+
+```r
+x <- c(1,2,3)
+y <- x
+y <- c(y,4)
+```
+:::{.quiz-multichoice}
+- [ ] [list: 1-4]{hint="x"}
+- [X] [list: 1-3]{hint="o"}
+- [ ] [list: 4]{hint="x"}
+:::
+
 
 ::: {.callout-caution}
 ## Your turn!
-
-Try to guess what the same implementations in R and Python would look like, when creating a copy of the variable and changing one of thes. Take a guess, and then check your answer!
+Try to replicate the same way R implements references in Python. Hint: shallow copy
 :::
 
-```r
-res2 <- res
-res2[["Kings"]] <- c("Student A", "Student B") 
 
-print("res -----------------")
-print(res)
-print("res2 -----------------")
-print(res2)
-```
-<details> 
-<summary>Answer</summary>
-
-```{r, echo=FALSE}
-library(stringr)
-
-create_students <- function(num_students) {
-  students <- paste("Student", substr(LETTERS, 1, num_students))
-  return(students)
-}
-
-split_students <- function(students, groups) {
-  n <- length(students) %/% length(groups)
-  remainder <- length(students) %% length(groups)  
-  
-  split <- list()
-  start <- 1
-  for (i in seq_along(groups)) {
-    end <- start + n - 1 + ifelse(i <= remainder, 1, 0)
-    split[[i]] <- students[start:end]
-    start <- end + 1
-  }
-  
-  names(split) <- groups
-  return(split)
-}
-
-cards <- c("Kings", "Jack", "Aces", "Queens", "Tens")
-students <- create_students(20)
-
-split <- split_students(students, cards)
-res <- split
-
-res2 <- res
-res2[["Kings"]] <- c("Student A", "Student B") 
-
-
-print("res -----------------")
-print(res)
-print("res2 -----------------")
-print(res2)
-
-```
-</details> 
-
-
-```python
-res2 = res
-# if we change res2, does res change?
-res2["Kings"] = ["Student A", "Student B"]
-
-print(f"{res=}")
-print(f"{res2=}")
-```
-<details> 
-<summary>Answer</summary>
-```{python, echo=FALSE}
-from string import ascii_uppercase
-
-
-def create_students(num_students):
-    return [f"Student {ascii_uppercase[i]}" for i in range(num_students)]
-
-
-def split_students(students, groups):
-
-    n = len(students) // len(groups)
-    remainder = len(students) % len(groups)
-    split = []
-    start = 0
-    for i in range(len(groups)):
-        # Distribute the remainder among the first 'remainder' groups
-        end = start + n + (1 if i < remainder else 0)
-        split.append(students[start:end])
-        start = end
-    return split
-
-
-cards = ["Kings", "Jack", "Aces", "Queens", "Tens"]
-students = create_students(20)
-
-split = split_students(students, cards)
-res = dict(zip(cards, split))
-
-res2 = res
-res2["Kings"] = ["Student A", "Student B"]
-print(f"{res=}")
-print(f"{res2=}")
-```
-
-</details> 
-
-<!-- my example:
-from string import ascii_uppercase
-
-cards = ["Kings", "Jack", "Aces", "Queens", "Tens"]
-l = []
-d = {}
-for i in list(ascii_uppercase)[:20]:
-    stu = f"Student {i}"
-    l.append(stu)
-
-# maybe split acc. to len of cards
-n = len(l) // len(cards)
-
-split = [l[i : i + n - 1] for i in range(0, len(l), n - 1)]
-# print(split)
-
-res = dict(zip(cards, split))
-print(res)
- -->
 
