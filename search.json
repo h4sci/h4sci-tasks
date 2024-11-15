@@ -4,7 +4,7 @@
     "href": "programming_exercises.html",
     "title": "Programming Exercises",
     "section": "",
-    "text": "This set of exercises is meant to test your knowledge of the concepts covered in block 2 of the course. All questions are Mulitple Choice!\n\n\nWhat is the evolutionary path of code, ideally?\n\n\n\n\n\n\n\n\n\n\n\nWhich of these types of data is persistent?\n\n\n\n\n\n\n\n\n\n\n\nWhich of these file formats are interoperable?\n\n\n\n\n\n\n\n\n\n\n\nWhich of these file formats are binary?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYour turn!\n\n\n\nThink about what the underlying structure of the non-binary file formats might be.\n\n\n\n\n\nWhat are the good ways to store nested data on disk (in a file)?\n\n\n\n\n\n\n\n\n\n\n\nGuess what the following code snippet in Python would return\nx = [1, 2, 3]\ny = x\ny.append(4)\nprint(x)\n\n\n\n\n\n\n\n\n\n\n\nGuess what the following code snippet in R would return\nx &lt;- c(1,2,3)\ny &lt;- x\ny &lt;- c(y,4)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYour turn!\n\n\n\nTry to replicate the same way R implements references in Python. Hint: shallow copy"
+    "text": "This set of exercises is meant to test your knowledge of the concepts covered in block 2 of the course. All questions are Mulitple Choice!\n\n\nWhat is the evolutionary path of code, ideally?\n\n\n\n\n\n\n\n\n\n\n\nWhich of these types of data is persistent?\n\n\n\n\n\n\n\n\n\n\n\nWhich of these file formats are interoperable?\n\n\n\n\n\n\n\n\n\n\n\nWhich of these file formats are binary?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYour turn!\n\n\n\nThink about what the underlying structure of the non-binary file formats might be.\n\n\n\n\n\nWhat are the good ways to store nested data on disk (in a file)?\n\n\n\n\n\n\n\n\n\n\n\nGuess what the following code snippet in Python would return\nx = [1, 2, 3]\ny = x\ny.append(4)\nprint(x)\n\n\n\n\n\n\n\n\n\n\n\nGuess what the following code snippet in R would return\nx &lt;- c(1,2,3)\ny &lt;- x\ny &lt;- c(y,4)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYour turn!\n\n\n\nTry to replicate the above behavior of R in Python (the copying of variables). Hint: you can use shallow copies"
   },
   {
     "objectID": "programming_exercises.html#exercise-1",
@@ -53,7 +53,7 @@
     "href": "programming_exercises.html#exercise-7",
     "title": "Programming Exercises",
     "section": "",
-    "text": "Guess what the following code snippet in R would return\nx &lt;- c(1,2,3)\ny &lt;- x\ny &lt;- c(y,4)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYour turn!\n\n\n\nTry to replicate the same way R implements references in Python. Hint: shallow copy"
+    "text": "Guess what the following code snippet in R would return\nx &lt;- c(1,2,3)\ny &lt;- x\ny &lt;- c(y,4)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYour turn!\n\n\n\nTry to replicate the above behavior of R in Python (the copying of variables). Hint: you can use shallow copies"
   },
   {
     "objectID": "git_exercises.html",
