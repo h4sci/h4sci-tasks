@@ -98,9 +98,9 @@ y.append(4)
 print(x)
 ```
 :::{.quiz-multichoice}
-- [X] [list: 1-4]{hint="o"}
-- [ ] [list: 1-3]{hint="x"}
-- [ ] [list: 4]{hint="x"}
+- [X] [list with elements 1-4]{hint="o"}
+- [ ] [list with elements 1-3]{hint="x"}
+- [ ] [list with element 4]{hint="x"}
 :::
 
 
@@ -114,15 +114,15 @@ y <- x
 y <- c(y,4)
 ```
 :::{.quiz-multichoice}
-- [ ] [list: 1-4]{hint="x"}
-- [X] [list: 1-3]{hint="o"}
-- [ ] [list: 4]{hint="x"}
+- [ ] [1 2 3 4]{hint="x"}
+- [X] [1 2 3]{hint="o"}
+- [ ] [4]{hint="x"}
 :::
 
 
 ::: {.callout-caution}
 ## Your turn!
-Try to replicate the same way R implements references in Python. Hint: shallow copy
+Try to replicate the above behavior of R in Python (the copying of variables). Hint: you can use shallow copies
 :::
 
 
