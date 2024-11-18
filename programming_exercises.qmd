@@ -19,7 +19,7 @@ use_python("/usr/bin/python3")
 ```
 # Programming Exercises
 
-This set of exercises is meant to test your knowledge of the concepts covered in block 2 of the course. All questions are Mulitple Choice! 
+This set of exercises is meant to test your knowledge of the concepts covered in block 2 of the course. All questions are Multiple Choice! 
 
 ## Exercise 1
 
@@ -112,6 +112,7 @@ Guess what the following code snippet in **R** would return
 x <- c(1,2,3)
 y <- x
 y <- c(y,4)
+print(x)
 ```
 :::{.quiz-multichoice}
 - [ ] [1 2 3 4]{hint="x"}
