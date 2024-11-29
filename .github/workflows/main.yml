@@ -1,3 +1,4 @@
+# Usage: the gh-pages can also be built via the command `quarto publish gh-pages` in the terminal
 # Simple data transformation workflow
 name: OECD Unemployment Rate CHE
 

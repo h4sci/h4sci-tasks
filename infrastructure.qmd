@@ -21,7 +21,7 @@ use_python("/usr/bin/python3")
 
 # Infrastructure
 
-This set of exercises is meant to test your knowledge of the concepts covered in block 3 of the course. All questions are Multiple Choice! 
+This set of exercises is meant to test your knowledge of the concepts covered in block 3 of the course. All questions are Multiple Choice.
 
 ## GitHub Continuous Integration 
 
@@ -53,18 +53,18 @@ jobs:
 
 ### Exercise 1
 
-What do you think lines 3 accomplishes?
+What do you think line 3 accomplishes?
 
 :::{.quiz-multichoice}
 - [ ] [When this file is run it executes `git push` ]{hint="x"}
-- [X] [Runs the workflow when someone executes `git push` or does a pull request]{hint="o"}
+- [X] [Runs the workflow when someone executes `git push`]{hint="o"}
 - [ ] [continuously executes `git push` until the action is successful]{hint="x"}
 - [ ] [It's just here for our understanding]{hint="x"}
 :::
 
 ### Exercise 2
 <!-- TODO: get line numbering in yml -->
-What do you think lines 11-15 does?
+What do you think lines 11-15 do?
 
 :::{.quiz-multichoice}
 - [X] [Installs R dependencies incl. packages]{hint="o"}
@@ -84,30 +84,12 @@ What could be a shortcoming of the configuration file shown above?
 - [ ] [The document is too short]{hint="x"}
 :::
 
-## Shiny Servers
 
-Look at the following `docker-compose.yml` file. Try to interpret what each of the lines means.
-
-```yml
-services:
-   postgres:
-      container_name: db_container
-      image: postgres
-      restart: always
-      environment:
-         - POSTGRES_USER=postgres
-         - POSTGRES_PASSWORD=postgres
-      ports:
-         - "1111:5432"
-      volumes:
-         - "./pgdata:/var/lib/postgresql/data"
-```
-
-## Dynamic vs. Static Hosting 
+## Dynamic vs. Static Tools
 
 ### Exercise 4 
-
-Which of the following frameworks are dynamically hosted??
+<!-- wording vague... -->
+Which of the following frameworks are dynamic?
 
 :::{.quiz-multichoice}
 - [ ] [Hugo]{hint="x"}
@@ -118,13 +100,13 @@ Which of the following frameworks are dynamically hosted??
 
 ### Exercise 5 
 
-Which of the following tools are hosted statically?
+Which of the tools can be used to host a static website?
 
 :::{.quiz-multichoice}
-- [X] [Jekyll]{hint="x"}
-- [ ] [Kubernetes]{hint="x"}
+- [X] [Jekyll]{hint="o"}
 - [X] [Github Pages]{hint="o"}
 - [X] [Quarto]{hint="o"}
+- [X] [Netlify]{hint="o"}
 :::
 
 
