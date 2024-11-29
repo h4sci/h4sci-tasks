@@ -56,6 +56,13 @@
     "text": "Guess what the following code snippet in R would return\nx &lt;- c(1,2,3)\ny &lt;- x\ny &lt;- c(y,4)\nprint(x)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYour turn!\n\n\n\nTry to replicate the above behavior of R in Python (the copying of variables). Hint: you can use shallow copies"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "H4Sci Exercises",
+    "section": "",
+    "text": "This website is aimed to test your knowledge of the course content you have learnt in the H4Sci Course. Click the links below to get started.\nGit Exercises - Block 1\nProgramming Exercises - Block 2"
+  },
+  {
     "objectID": "git_exercises.html",
     "href": "git_exercises.html",
     "title": "Git Exercises",
@@ -105,10 +112,31 @@
     "text": "Exercise 1\n\n\n\n\n\n\nCaution\n\n\n\nCross all options which you could use to solve the issue of diverging branches.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nIf you have had trouble with these exercises, you might want to try the following resources:\n\nH4Sci-Tasks 1-3\nGit Katas"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "H4Sci Exercises",
+    "objectID": "infrastructure.html",
+    "href": "infrastructure.html",
+    "title": "Infrastructure",
     "section": "",
-    "text": "This website is aimed to test your knowledge of the course content you have learnt in the H4Sci Course. Click the links below to get started.\nGit Exercises - Block 1\nProgramming Exercises - Block 2"
+    "text": "This set of exercises is meant to test your knowledge of the concepts covered in block 3 of the course. All questions are Multiple Choice!\n\n\nLook at the following .yaml file. This is a configuration for a Continuous Integrations Process (Github Actions in this case) for a minimal example.\n\n\n\n\n\n\nYour turn!\n\n\n\nTry to interpret what each of the lines means.\n\n\nname: Basic Continuous Integration\n\non: push\n\njobs:\n  build:\n    name: build\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: r-lib/actions/setup-r@v2\n        with:\n          packages: |\n            rmarkdown\n            kofdata\n\n\nWhat do you think lines 3 accomplishes?\n\n\n\n\n\n\n\n\n\n\n\n\nWhat do you think lines 11-15 does?\n\n\n\n\n\n\n\n\n\n\n\nWhat could be a shortcoming of the configuration file shown above?\n\n\n\n\n\n\n\n\n\n\n\n\nLook at the following docker-compose.yml file. Try to interpret what each of the lines means.\nservices:\n   postgres:\n      container_name: db_container\n      image: postgres\n      restart: always\n      environment:\n         - POSTGRES_USER=postgres\n         - POSTGRES_PASSWORD=postgres\n      ports:\n         - \"1111:5432\"\n      volumes:\n         - \"./pgdata:/var/lib/postgresql/data\"\n\n\n\n\n\nWhich of the following frameworks are dynamically hosted??\n\n\n\n\n\n\n\n\n\n\n\nWhich of the following tools are hosted statically?\n\n\n\n\n\n\n\n\n\n\n\nWhich of the following are true?"
+  },
+  {
+    "objectID": "infrastructure.html#github-continuous-integration",
+    "href": "infrastructure.html#github-continuous-integration",
+    "title": "Infrastructure",
+    "section": "",
+    "text": "Look at the following .yaml file. This is a configuration for a Continuous Integrations Process (Github Actions in this case) for a minimal example.\n\n\n\n\n\n\nYour turn!\n\n\n\nTry to interpret what each of the lines means.\n\n\nname: Basic Continuous Integration\n\non: push\n\njobs:\n  build:\n    name: build\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: r-lib/actions/setup-r@v2\n        with:\n          packages: |\n            rmarkdown\n            kofdata\n\n\nWhat do you think lines 3 accomplishes?\n\n\n\n\n\n\n\n\n\n\n\n\nWhat do you think lines 11-15 does?\n\n\n\n\n\n\n\n\n\n\n\nWhat could be a shortcoming of the configuration file shown above?"
+  },
+  {
+    "objectID": "infrastructure.html#shiny-servers",
+    "href": "infrastructure.html#shiny-servers",
+    "title": "Infrastructure",
+    "section": "",
+    "text": "Look at the following docker-compose.yml file. Try to interpret what each of the lines means.\nservices:\n   postgres:\n      container_name: db_container\n      image: postgres\n      restart: always\n      environment:\n         - POSTGRES_USER=postgres\n         - POSTGRES_PASSWORD=postgres\n      ports:\n         - \"1111:5432\"\n      volumes:\n         - \"./pgdata:/var/lib/postgresql/data\""
+  },
+  {
+    "objectID": "infrastructure.html#dynamic-vs.-static-hosting",
+    "href": "infrastructure.html#dynamic-vs.-static-hosting",
+    "title": "Infrastructure",
+    "section": "",
+    "text": "Which of the following frameworks are dynamically hosted??\n\n\n\n\n\n\n\n\n\n\n\nWhich of the following tools are hosted statically?\n\n\n\n\n\n\n\n\n\n\n\nWhich of the following are true?"
   }
 ]
