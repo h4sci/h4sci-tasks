@@ -156,8 +156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
   <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
   </ul></li>
-  <li><a href="#shiny-servers" id="toc-shiny-servers" class="nav-link" data-scroll-target="#shiny-servers">Shiny Servers</a></li>
-  <li><a href="#dynamic-vs.-static-hosting" id="toc-dynamic-vs.-static-hosting" class="nav-link" data-scroll-target="#dynamic-vs.-static-hosting">Dynamic vs.&nbsp;Static Hosting</a>
+  <li><a href="#dynamic-vs.-static-tools" id="toc-dynamic-vs.-static-tools" class="nav-link" data-scroll-target="#dynamic-vs.-static-tools">Dynamic vs.&nbsp;Static Tools</a>
   <ul class="collapse">
   <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4">Exercise 4</a></li>
   <li><a href="#exercise-5" id="toc-exercise-5" class="nav-link" data-scroll-target="#exercise-5">Exercise 5</a></li>
@@ -175,7 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="infrastructure" class="level1">
 <h1>Infrastructure</h1>
-<p>This set of exercises is meant to test your knowledge of the concepts covered in block 3 of the course. All questions are Multiple Choice!</p>
+<p>This set of exercises is meant to test your knowledge of the concepts covered in block 3 of the course. All questions are Multiple Choice.</p>
 <section id="github-continuous-integration" class="level2">
 <h2 class="anchored" data-anchor-id="github-continuous-integration">GitHub Continuous Integration</h2>
 <p>Look at the following <code>.yaml</code> file. This is a configuration for a Continuous Integrations Process (Github Actions in this case) for a minimal example.</p>
@@ -209,7 +208,7 @@ Your turn!
 <span id="cb1-15"><a href="#cb1-15"></a>            kofdata</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="exercise-1" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-1">Exercise 1</h3>
-<p>What do you think lines 3 accomplishes?</p>
+<p>What do you think line 3 accomplishes?</p>
 <div id="qforms-quiz-1" class="radio-group">
 </div>
 
@@ -217,7 +216,7 @@ Your turn!
   var compareArrays = (a, b) =>
     a.length === b.length && a.every((element, index) => element === b[index]);
   var quiz_container = document.getElementById("qforms-quiz-1");
-  var questions = "When this file is run it executes git push,Runs the workflow when someone executes git push or does a pull request,continuously executes git push until the action is successful,It’s just here for our understanding";
+  var questions = "When this file is run it executes git push,Runs the workflow when someone executes git push,continuously executes git push until the action is successful,It’s just here for our understanding";
   var hints = "x,o,x,x"
   console.log("hints", hints)
   questions = questions.split(",");
@@ -279,7 +278,7 @@ Your turn!
 <section id="exercise-2" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-2">Exercise 2</h3>
 <!-- TODO: get line numbering in yml -->
-<p>What do you think lines 11-15 does?</p>
+<p>What do you think lines 11-15 do?</p>
 <div id="qforms-quiz-2" class="radio-group">
 </div>
 
@@ -416,27 +415,12 @@ Your turn!
 
 </section>
 </section>
-<section id="shiny-servers" class="level2">
-<h2 class="anchored" data-anchor-id="shiny-servers">Shiny Servers</h2>
-<p>Look at the following <code>docker-compose.yml</code> file. Try to interpret what each of the lines means.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">services</span><span class="kw">:</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="at">   </span><span class="fu">postgres</span><span class="kw">:</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="at">      </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> db_container</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="at">      </span><span class="fu">image</span><span class="kw">:</span><span class="at"> postgres</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="at">      </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> always</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="at">      </span><span class="fu">environment</span><span class="kw">:</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="at">         </span><span class="kw">-</span><span class="at"> POSTGRES_USER=postgres</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="at">         </span><span class="kw">-</span><span class="at"> POSTGRES_PASSWORD=postgres</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="at">      </span><span class="fu">ports</span><span class="kw">:</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="at">         </span><span class="kw">-</span><span class="at"> </span><span class="st">"1111:5432"</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="at">      </span><span class="fu">volumes</span><span class="kw">:</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="at">         </span><span class="kw">-</span><span class="at"> </span><span class="st">"./pgdata:/var/lib/postgresql/data"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="dynamic-vs.-static-hosting" class="level2">
-<h2 class="anchored" data-anchor-id="dynamic-vs.-static-hosting">Dynamic vs.&nbsp;Static Hosting</h2>
+<section id="dynamic-vs.-static-tools" class="level2">
+<h2 class="anchored" data-anchor-id="dynamic-vs.-static-tools">Dynamic vs.&nbsp;Static Tools</h2>
 <section id="exercise-4" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-4">Exercise 4</h3>
-<p>Which of the following frameworks are dynamically hosted??</p>
+<!-- wording vague... -->
+<p>Which of the following frameworks are dynamic?</p>
 <div id="qforms-quiz-4" class="radio-group">
 </div>
 
@@ -505,7 +489,7 @@ Your turn!
 </section>
 <section id="exercise-5" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-5">Exercise 5</h3>
-<p>Which of the following tools are hosted statically?</p>
+<p>Which of the tools can be used to host a static website?</p>
 <div id="qforms-quiz-5" class="radio-group">
 </div>
 
@@ -513,8 +497,8 @@ Your turn!
   var compareArrays = (a, b) =>
     a.length === b.length && a.every((element, index) => element === b[index]);
   var quiz_container = document.getElementById("qforms-quiz-5");
-  var questions = "Jekyll,Kubernetes,Github Pages,Quarto";
-  var hints = "x,x,o,o"
+  var questions = "Jekyll,Github Pages,Quarto,Netlify";
+  var hints = "o,o,o,o"
   console.log("hints", hints)
   questions = questions.split(",");
   hints = hints.split(",");
@@ -551,7 +535,7 @@ Your turn!
     var selected = document.querySelectorAll('input[name=qforms-quiz-name-5]:checked')
     var values = Array.from(selected).map(element => element.value);
     var results = document.getElementById("qforms-quiz-results-5")
-    var solutions = "1,3,4".split(",")
+    var solutions = "1,2,3,4".split(",")
     if(selected != undefined) {
       var success = compareArrays(values, solutions)
       results.classList.toggle(success ? "success": "failure")
