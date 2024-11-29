@@ -18,3 +18,5 @@ This website is aimed to test your knowledge of the course content you have lear
 [Git Exercises - Block 1](git_exercises.qmd)
 
 [Programming Exercises - Block 2](programming_exercises.qmd)
+
+[Infrastructure - Block 3](infrastructure.qmd)
