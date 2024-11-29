@@ -1,0 +1,126 @@
+---
+format:
+  html: 
+    output-file: "infrastructure"
+    output-ext:  "html"
+editor: source
+engine: knitr
+filters:
+  - webr-teachr
+  - quiz-teachr
+webr:
+  packages: ["reticulate"]
+  autoload-packages: false
+---
+
+```{r setup, include=FALSE}
+library(reticulate)
+use_python("/usr/bin/python3")
+```
+
+# Infrastructure
+
+This set of exercises is meant to test your knowledge of the concepts covered in block 23 of the course. All questions are Multiple Choice! 
+
+## GitHub Continuous Integration 
+
+Look at the following `.yml` file. Try to interpret what each of the lines means.
+
+
+```yaml
+name: Continuous Integration
+
+on: [push, pull_request]
+
+defaults:
+    run:
+        shell: bash
+
+permissions:
+  contents: write
+
+jobs:
+  quarto:
+    name: quarto_render
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            rmarkdown
+            tidyverse
+            kofdata
+          install-quarto: 'true'
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          to: html
+          path: index.qmd
+      - name: deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+            branch: gh-pages
+            folder: '.'
+            clean: true
+```
+
+
+### Exercise 1
+
+What do you think the command `on` does in the `.yml` file?
+
+:::{.quiz-multichoice}
+- [ ] [When this file is run it executes `git push` and does a pull request]{hint="x"}
+- [X] [Runs the workflow when someone executes `git push` or does a pull request ]{hint="o"}
+- [ ] [continuously executes `git push` until we have a website]{hint="x"}
+- [ ] [It's just here for our understanding]{hint="x"}
+:::
+
+### Exercise 2
+<!-- TODO: get line numbering in yml -->
+What do you think the snippet ` - uses: r-lib/actions/setup-r-dependencies@v2` and the 4 following lines do?
+
+:::{.quiz-multichoice}
+- [X] [Installs R dependencies incl. packages]{hint="o"}
+- [ ] [Installs R dependencies incl. packages, then removes then]{hint="x"}
+- [ ] [Links the `.yml` file to an external API that installs R packages remotely]{hint="x"}
+- [ ] [Sets up a new Git repository and initializes the dependencies]{hint="x"}
+:::
+
+### Exercise 3
+
+What do you this the job step with the name `deploy` does?
+
+:::{.quiz-multichoice}
+- [ ] [Deploys the project to a remote server]{hint="x"}
+- [X] [Deploys the project to GitHub Pages if the branch is `main`]{hint="o"}
+- [ ] [Deploys the project to GitHub Pages if the branch is `master`]{hint="x"}
+- [ ] [Deploys the project to GitHub Pages if the branch is `gh-pages`]{hint="x"}
+:::
+
+## Shiny Servers
+
+Look at the following `docker-compose.yml` file. Try to interpret what each of the lines means.
+
+```yml
+services:
+   postgres:
+      container_name: db_container
+      image: postgres
+      restart: always
+      environment:
+         - POSTGRES_USER=postgres
+         - POSTGRES_PASSWORD=postgres
+      ports:
+         - "1111:5432"
+      volumes:
+         - "./pgdata:/var/lib/postgresql/data"
+```
+
+
+### Exercise 4 
+

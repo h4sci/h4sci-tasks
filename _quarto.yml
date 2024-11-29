@@ -24,6 +24,7 @@ website:
     left:
       - git_exercises.qmd
       - programming_exercises.qmd
+      - infrastructure.qmd
 
 
 format:
