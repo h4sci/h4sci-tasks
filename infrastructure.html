@@ -216,7 +216,7 @@ Your turn!
   var compareArrays = (a, b) =>
     a.length === b.length && a.every((element, index) => element === b[index]);
   var quiz_container = document.getElementById("qforms-quiz-1");
-  var questions = "When this file is run it executes git push,Runs the workflow when someone executes git push,continuously executes git push until the action is successful,It’s just here for our understanding";
+  var questions = "When this file is run it executes git push,It runs the workflow when someone executes git push,It continuously executes git push until the action is successful,It’s just here for our understanding";
   var hints = "x,o,x,x"
   console.log("hints", hints)
   questions = questions.split(",");
@@ -413,6 +413,19 @@ Your turn!
 </style>
 
 
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Your Turn!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you would like to replicate the Github Actions example from above, you can find a <code>gha_repo.rmd</code> file under <a href="https://github.com/h4sci/h4sci-tasks">https://github.com/h4sci/h4sci-tasks</a></p>
+</div>
+</div>
 </section>
 </section>
 <section id="dynamic-vs.-static-tools" class="level2">
