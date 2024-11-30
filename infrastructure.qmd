@@ -19,7 +19,7 @@ library(reticulate)
 use_python("/usr/bin/python3")
 ```
 
-# Infrastructure
+# Infrastructure Exercises
 
 This set of exercises is meant to test your knowledge of the concepts covered in block 3 of the course. All questions are Multiple Choice.
 
