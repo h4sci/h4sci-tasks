@@ -1,0 +1,15 @@
+---
+title: "Testing the Github Actions Workflow with a small Example"
+---
+
+### This is a test file to check the Github Actions Workflow
+
+```{r, include = FALSE}
+library(kofdata)
+```
+
+```{r}
+ts <- get_time_series("kofbarometer")
+head(ts)
+str(ts)
+```

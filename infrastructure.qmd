@@ -57,8 +57,8 @@ What do you think line 3 accomplishes?
 
 :::{.quiz-multichoice}
 - [ ] [When this file is run it executes `git push` ]{hint="x"}
-- [X] [Runs the workflow when someone executes `git push`]{hint="o"}
-- [ ] [continuously executes `git push` until the action is successful]{hint="x"}
+- [X] [It runs the workflow when someone executes `git push`]{hint="o"}
+- [ ] [It continuously executes `git push` until the action is successful]{hint="x"}
 - [ ] [It's just here for our understanding]{hint="x"}
 :::
 
@@ -84,6 +84,10 @@ What could be a shortcoming of the configuration file shown above?
 - [ ] [The document is too short]{hint="x"}
 :::
 
+::: {.callout-tip}
+## Your Turn!
+If you would like to replicate the Github Actions example from above, you can find a `gha_repo.rmd` file under [https://github.com/h4sci/h4sci-tasks](https://github.com/h4sci/h4sci-tasks)
+:::
 
 ## Dynamic vs. Static Tools
 
