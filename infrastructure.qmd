@@ -79,8 +79,8 @@ Which of the below is true?
 
 :::{.quiz-multichoice}
 - [ ] [The configuration file will only work for macOS systems]{hint="x"}
-- [X] [It uses marketplace actions from third parties (other than GitHub) which is not transparent and may not work in the future]{hint="o"}
-- [X] [marketplace actions are convenient and can do standard things effortlessly, it's a tradeoff: robustness and transparency vs. development speed and convenience]
+- [X] [It uses marketplace actions from third parties (other than GitHub)]{hint="o"}
+- [X] [marketplace actions are convenient but are not always robust and transparent]
 - [ ] [It assumes the actions from lines 10 and 11 are pre-installed which may cause errors]{hint="x"}
 - [ ] [The document is too short to be useful]{hint="x"}
 :::
