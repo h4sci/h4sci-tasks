@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>infrastructure – H4Sci Exercises</title>
+<title>H4Sci Exercises</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -134,7 +134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+          <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -347,7 +347,7 @@ Your turn!
 </section>
 <section id="exercise-3" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-3">Exercise 3</h3>
-<p>What could be a shortcoming of the configuration file shown above?</p>
+<p>Which of the below is true?</p>
 <div id="qforms-quiz-3" class="radio-group">
 </div>
 
@@ -355,7 +355,7 @@ Your turn!
   var compareArrays = (a, b) =>
     a.length === b.length && a.every((element, index) => element === b[index]);
   var quiz_container = document.getElementById("qforms-quiz-3");
-  var questions = "The configuration file will only work for macOS systems,It uses marketplace actions which is not transparent,It assumes the actions from lines 10 and 11 are pre-installed which may cause errors,The document is too short";
+  var questions = "The configuration file will only work for macOS systems,It uses marketplace actions from third parties (other than GitHub) which is not transparent and may not work in the future,It assumes the actions from lines 10 and 11 are pre-installed which may cause errors,The document is too short to be useful";
   var hints = "x,o,x,x"
   console.log("hints", hints)
   questions = questions.split(",");
@@ -393,7 +393,7 @@ Your turn!
     var selected = document.querySelectorAll('input[name=qforms-quiz-name-3]:checked')
     var values = Array.from(selected).map(element => element.value);
     var results = document.getElementById("qforms-quiz-results-3")
-    var solutions = "2".split(",")
+    var solutions = "2,3".split(",")
     if(selected != undefined) {
       var success = compareArrays(values, solutions)
       results.classList.toggle(success ? "success": "failure")
@@ -433,7 +433,7 @@ Your Turn!
 <section id="exercise-4" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-4">Exercise 4</h3>
 <!-- wording vague... -->
-<p>Which of the following frameworks are dynamic?</p>
+<p>Which of the following frameworks can be used to build dynamic websites?</p>
 <div id="qforms-quiz-4" class="radio-group">
 </div>
 
@@ -441,8 +441,8 @@ Your Turn!
   var compareArrays = (a, b) =>
     a.length === b.length && a.every((element, index) => element === b[index]);
   var quiz_container = document.getElementById("qforms-quiz-4");
-  var questions = "Hugo,Docker,Netlify,R Shiny";
-  var hints = "x,o,x,o"
+  var questions = "Hugo,Django,Wordpress,Jekyll,R/Python Shiny";
+  var hints = "x,o,o,x,o"
   console.log("hints", hints)
   questions = questions.split(",");
   hints = hints.split(",");
@@ -479,7 +479,7 @@ Your Turn!
     var selected = document.querySelectorAll('input[name=qforms-quiz-name-4]:checked')
     var values = Array.from(selected).map(element => element.value);
     var results = document.getElementById("qforms-quiz-results-4")
-    var solutions = "2,4".split(",")
+    var solutions = "2,3,5".split(",")
     if(selected != undefined) {
       var success = compareArrays(values, solutions)
       results.classList.toggle(success ? "success": "failure")
@@ -502,7 +502,7 @@ Your Turn!
 </section>
 <section id="exercise-5" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-5">Exercise 5</h3>
-<p>Which of the tools can be used to host a static website?</p>
+<p>Which of the following platforms is a reasonable choice to host a static website?</p>
 <div id="qforms-quiz-5" class="radio-group">
 </div>
 
@@ -510,8 +510,8 @@ Your Turn!
   var compareArrays = (a, b) =>
     a.length === b.length && a.every((element, index) => element === b[index]);
   var quiz_container = document.getElementById("qforms-quiz-5");
-  var questions = "Jekyll,Github Pages,Quarto,Netlify";
-  var hints = "o,o,o,o"
+  var questions = "Wordpress.com,Github Pages,Netlify";
+  var hints = "o,o,o"
   console.log("hints", hints)
   questions = questions.split(",");
   hints = hints.split(",");
@@ -548,7 +548,7 @@ Your Turn!
     var selected = document.querySelectorAll('input[name=qforms-quiz-name-5]:checked')
     var values = Array.from(selected).map(element => element.value);
     var results = document.getElementById("qforms-quiz-results-5")
-    var solutions = "1,2,3,4".split(",")
+    var solutions = "2,3".split(",")
     if(selected != undefined) {
       var success = compareArrays(values, solutions)
       results.classList.toggle(success ? "success": "failure")
@@ -679,7 +679,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -711,29 +722,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/h4sci\.github\.io\/h4sci-tasks\/index\.html");
@@ -741,7 +730,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
