@@ -75,13 +75,14 @@ What do you think lines 11-15 do?
 
 ### Exercise 3
 
-What could be a shortcoming of the configuration file shown above?
+Which of the below is true?
 
 :::{.quiz-multichoice}
 - [ ] [The configuration file will only work for macOS systems]{hint="x"}
-- [X] [It uses marketplace actions which is not transparent]{hint="o"}
+- [X] [It uses marketplace actions from third parties (other than GitHub) which is not transparent and may not work in the future]{hint="o"}
+- [X] [marketplace actions are convenient and can do standard things effortlessly, it's a tradeoff: robustness and transparency vs. development speed and convenience]
 - [ ] [It assumes the actions from lines 10 and 11 are pre-installed which may cause errors]{hint="x"}
-- [ ] [The document is too short]{hint="x"}
+- [ ] [The document is too short to be useful]{hint="x"}
 :::
 
 ::: {.callout-tip}
@@ -93,23 +94,23 @@ If you would like to replicate the Github Actions example from above, you can fi
 
 ### Exercise 4 
 <!-- wording vague... -->
-Which of the following frameworks are dynamic?
+Which of the following frameworks can be used to build dynamic websites?
 
 :::{.quiz-multichoice}
 - [ ] [Hugo]{hint="x"}
-- [X] [Docker]{hint="o"}
-- [ ] [Netlify]{hint="x"}
-- [X] [R Shiny]{hint="o"}
+- [X] [Django]{hint="o"}
+- [X] [Wordpress]{hint="o"}
+- [ ] [Jekyll]{hint="x"}
+- [X] [R/Python Shiny]{hint="o"}
 :::
 
 ### Exercise 5 
 
-Which of the tools can be used to host a static website?
+Which of the following platforms is a reasonable choice to host a static website?
 
 :::{.quiz-multichoice}
-- [X] [Jekyll]{hint="o"}
+- [ ] [Wordpress.com]{hint="o"}
 - [X] [Github Pages]{hint="o"}
-- [X] [Quarto]{hint="o"}
 - [X] [Netlify]{hint="o"}
 :::
 
